@@ -1,0 +1,153 @@
+/* ---------------------------
+  Nav Bar and Logo on All Pages
+  ---------------------------- */
+  .w3-top {
+    background-color: white;
+    /* max-height: 100px; */
+  }
+
+  /* ---------------------
+    All Pages
+    --------------------- */
+  body,h1,h2,h3,h4,h5,h6,p, ul {font-family: "Lato", sans-serif;}
+  body, html {
+    height: 100%;
+    color: rgb(38, 36, 36);
+    line-height: 1.8;
+    background-color:whitesmoke;
+    scroll-behavior: smooth;
+  }
+  
+  p {
+    font-size: 18px;
+    text-align: justify;
+  }
+
+  h4 {
+      text-align: center;
+      padding-top: 10px;
+  }
+  
+  /* ----------------
+     Home Page
+     ---------------- */
+  /* Create a Parallax Effect */
+  /* First image (Full height) */
+  .bgimg-1 {
+    background-image: url("../images/bgimage1.jpg");
+    height: 100%;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+/* ----------------------------------
+    Background  all but home page
+    ---------------------------------- */
+    .background {
+        background-color:  rgb(194, 194, 204);
+        position: absolute;
+    }
+
+  #myHeader {
+      margin-bottom: 3%;
+  }
+  
+  li {
+    font-size: 18px;
+    list-style-type: square;
+  }
+  
+  /* .w3-card {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 25px;
+    background-color: whitesmoke;
+  } */
+  
+  h1,h3,h5 {
+    font-weight: bolder;
+  }
+  
+  h5 {
+    padding-left: 10px;
+    padding-top: 10px;
+  }
+  
+  .i {
+      font-size: 120px;
+  }
+
+  .w3-container {
+      margin-left: 5%;
+      margin-right: 5%;
+      margin-bottom: 15%;
+      margin-top: 5%;   
+  }
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+    padding-bottom: 50vh;
+}
+
+  #content-wrap {
+    padding-bottom: 2.5rem; 
+  }
+
+  .w3-card-home {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 480px;
+  }
+
+  .w3-card-company {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 10px;
+    margin-right: 25px;
+    margin-left: 25px;
+    background-color: whitesmoke;
+  }
+
+  .w3-card-company p {
+    text-align: justify;
+  }
+
+  .w3-card-team {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 450px;
+  }
+
+  .w3-card-team li {
+    text-align: left;
+    font-size: 16px;
+  }
+
+  .w3-card-products {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 650px;
+  }
+
+  .w3-card-products li {
+    text-align: left;
+    font-size: 16px;
+  }
+  
+  /* ---------------------
+    Footer - All Pages
+    --------------------- */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #003da5;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 2px; 
+    padding-bottom: 2px;
+  }
