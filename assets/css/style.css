@@ -3,14 +3,6 @@
   ---------------------------- */
 .w3-top {
   background-color: rgb(233, 237, 249);
-  padding: 10px;
-}
-
-#myNavbar {
-  margin-left: 10px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-  margin-right: 20px;
 }
 
 a:link {
@@ -40,9 +32,13 @@ body, html {
   scroll-behavior: smooth;
 }
 
+.w3-margin-top {
+  margin-top: 0;
+}
+
 .w3-center {
-  padding-top: 50px;
-  padding-bottom: 5px;
+  padding-top: 35px;
+  padding-bottom: 45px;
 }
 
 p {
@@ -52,7 +48,9 @@ p {
 
 h4 {
   text-align: center;
-  padding-top: 10px;
+  /* padding-top: 10px; */
+  margin-left: 80px;
+  margin-right: 80px;
 }
 
 /* ----------------
@@ -77,9 +75,9 @@ h4 {
   position: absolute;
 }
 
-/* #myHeader {
-  margin-bottom: 3%;
-} */
+#myHeader {
+  margin-top: 75px;
+}
 
 li {
   font-size: 16px;
@@ -97,7 +95,7 @@ h1,h3,h4,h5 {
 }
 
 h4, h5 {
-  padding-left: 10px;
+  padding-left: 40px;
   padding-top: 10px;
 }
 
@@ -105,17 +103,14 @@ h4, h5 {
   font-size: 120px;
 }
 
-.w3-container {
-    /* margin-left: 10%;
-    margin-right: 5%;
-    margin-bottom: 10%; */
+.w3-container-home {
     margin-top: 6%;   
 }
 
 #page-container {
     position: relative;
     min-height: 100vh;
-    padding-bottom: 50vh;
+    padding-bottom: 10vh;
 }
 
 #content-wrap {
@@ -133,7 +128,7 @@ h4, h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 900px;
+  min-height: 1000px;
 }
 
 .w3-card-company {
@@ -144,7 +139,7 @@ h4, h5 {
 }
 
 .w3-card-company p {
-  text-align: justify;
+  text-align: left;
 }
 
 .w3-card-company li {
@@ -177,7 +172,7 @@ h4, h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 750px;
+  min-height: 775px;
 }
 
 .w3-card-services li {
