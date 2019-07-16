@@ -6,18 +6,22 @@
 }
 
 a:link {
+  color:  #003da5;
   text-decoration: none;
 }
 
 a:visited {
+  color:  #003da5;
   text-decoration: none;
 }
 
 a:hover {
+  color: #003da5;
   text-decoration: none;
 }
 
 a:active {
+  color: #003da5;
   text-decoration: none;
 }
 /* ---------------------
@@ -41,6 +45,11 @@ body, html {
   padding-bottom: 45px;
 }
 
+.w3-center-testamonials {
+  padding-top: 20px;
+  padding-bottom: 5px;
+}
+
 p {
   font-size: 18px;
   text-align: left;
@@ -49,8 +58,8 @@ p {
 h4 {
   text-align: center;
   /* padding-top: 10px; */
-  margin-left: 80px;
-  margin-right: 80px;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 /* ----------------
@@ -77,6 +86,7 @@ h4 {
 
 #myHeader {
   margin-top: 75px;
+  width: 100%;
 }
 
 li {
@@ -94,9 +104,14 @@ h1,h3,h4,h5 {
   font-weight: 900;
 }
 
-h4, h5 {
+h4 {
   padding-left: 40px;
-  padding-top: 10px;
+  padding-top: 25px;
+}
+
+h5 {
+  /* padding-left: 40px; */
+  padding-top: 15px;
 }
 
 .i {
@@ -121,14 +136,14 @@ h4, h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 480px;
+  min-height: 500px;
 }
 
 .w3-card-home-awards {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 1000px;
+  min-height: 900px;
 }
 
 .w3-card-company {
@@ -161,7 +176,7 @@ h4, h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 680px;
+  min-height: 580px;
 }
 
 .w3-card-products li {
@@ -172,11 +187,18 @@ h4, h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 775px;
+  min-height: 680px;
 }
 
 .w3-card-services li {
   text-align: left;
+}
+
+.w3-card-compound {
+  box-shadow: 2px 2px 2px 2px #003da5;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  min-height: 350px;
 }
 
 /* ---------------------
