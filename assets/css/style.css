@@ -1,8 +1,15 @@
 /* ---------------------------
   Nav Bar and Logo on All Pages
   ---------------------------- */
+.img-fluid {
+  width: 20%;
+  height: 8%;
+}
+
+
 .w3-top {
-  background-color: rgb(233, 237, 249);
+  /* background-color: rgb(233, 237, 249); */
+  background-color: white;
 }
 
 a:link {
@@ -27,7 +34,7 @@ a:active {
 /* ---------------------
   All Pages
   --------------------- */
-body,h1,h2,h3,h4,h5,h6,p, ul {font-family: "Lato", sans-serif;}
+body,h1,h2,h4,h5,h6,p, ul {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
   color: rgb(38, 36, 36);
@@ -35,31 +42,61 @@ body, html {
   background-color:whitesmoke;
   scroll-behavior: smooth;
 }
+h3 {font-family: "Roboto", sans-serif;}
+h3 {
+  color:rgb(38, 36, 36);
+  line-height: 1.75;
+  background-color:whitesmoke;
+  scroll-behavior: smooth;
+}
+
+h6 {
+  color:rgb(38, 36, 36);
+  line-height: .75;
+  background-color:whitesmoke;
+  scroll-behavior: smooth; 
+}
 
 .w3-margin-top {
   margin-top: 0;
 }
 
 .w3-center {
-  padding-top: 35px;
-  padding-bottom: 45px;
+  padding-top: 20px;
+  padding-bottom: 20px;
 }
 
+.w3-center-header {
+  padding-top: 35px;
+}
+
+.center {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 10px;
+  width: 5%;
+  height: 5%;
+}
+
+
+.w3-center-testamonials {font-family: "Roboto", sans-serif;}
 .w3-center-testamonials {
   padding-top: 20px;
   padding-bottom: 5px;
+
+}
+
+.w3-row-padding {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  padding-left: 100px;
+  padding-right: 100px;
 }
 
 p {
   font-size: 18px;
   text-align: left;
-}
-
-h4 {
-  text-align: center;
-  /* padding-top: 10px; */
-  margin-left: 150px;
-  margin-right: 150px;
 }
 
 /* ----------------
@@ -81,7 +118,7 @@ h4 {
     ---------------------------------- */
 .background {
   background-color:  rgb(194, 194, 204);
-  position: absolute;
+  /* position: absolute; */
 }
 
 #myHeader {
@@ -107,6 +144,9 @@ h1,h3,h4,h5 {
 h4 {
   padding-left: 40px;
   padding-top: 25px;
+  text-align: center;
+  margin-left: 150px;
+  margin-right: 150px;
 }
 
 h5 {
@@ -161,11 +201,24 @@ h5 {
   text-align: left;
 }
 
+.w3-card-contact {
+  box-shadow: 2px 2px 2px 2px #003da5;
+  padding: 15px;
+  margin-bottom: 5px;
+  background-color: whitesmoke;
+  min-height: 325px;
+}
+
+.w3-card-contact li {
+  text-align: left;
+  list-style-type: none;
+}
+
 .w3-card-team {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 450px;
+  min-height: 600px;
 }
 
 .w3-card-team li {
@@ -187,10 +240,32 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 680px;
+  min-height: 750px;
 }
 
 .w3-card-services li {
+  text-align: left;
+}
+
+
+.w3-card-resources {
+  box-shadow: 2px 2px 2px 2px #003da5;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+  min-height: 560px;
+}
+
+.w3-card-resources-links {
+  box-shadow: 2px 2px 2px 2px #003da5;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-left: 300px;
+  margin-right: 300px;
+  margin-bottom: 50px;
+  background-color: whitesmoke;
+}
+
+.w3-card-resources-links li {
   text-align: left;
 }
 
@@ -198,7 +273,7 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 350px;
+  min-height: 400px;
 }
 
 /* ---------------------
