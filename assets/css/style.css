@@ -38,21 +38,22 @@ body,h1,h2,h4,h5,h6,p, ul {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
   color: rgb(38, 36, 36);
-  line-height: 1.75;
+  line-height: 1.65;
   background-color:whitesmoke;
   scroll-behavior: smooth;
 }
 h3 {font-family: "Roboto", sans-serif;}
 h3 {
   color:rgb(38, 36, 36);
-  line-height: 1.75;
+  line-height: 1.5;
   background-color:whitesmoke;
   scroll-behavior: smooth;
+  padding-top: 20px;
 }
 
 h6 {
   color:rgb(38, 36, 36);
-  line-height: .75;
+  line-height: 1.5;
   background-color:whitesmoke;
   scroll-behavior: smooth; 
 }
@@ -77,6 +78,11 @@ h6 {
   padding-top: 10px;
   width: 5%;
   height: 5%;
+}
+
+#logo {
+  width: 12%;
+  height: 12%;
 }
 
 
@@ -124,6 +130,7 @@ p {
 #myHeader {
   margin-top: 75px;
   width: 100%;
+ 
 }
 
 li {
@@ -152,6 +159,7 @@ h4 {
 h5 {
   /* padding-left: 40px; */
   padding-top: 15px;
+  line-height: .75;
 }
 
 .i {
@@ -183,7 +191,7 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 900px;
+  min-height: 1000px;
 }
 
 .w3-card-company {
@@ -240,7 +248,7 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 750px;
+  min-height: 860px;
 }
 
 .w3-card-services li {
@@ -252,7 +260,7 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 560px;
+  min-height: 620px;
 }
 
 .w3-card-resources-links {
@@ -273,7 +281,7 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 400px;
+  min-height: 600px;
 }
 
 /* ---------------------
