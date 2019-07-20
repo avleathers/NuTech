@@ -42,6 +42,7 @@ body, html {
   background-color:whitesmoke;
   scroll-behavior: smooth;
 }
+
 h3 {font-family: "Roboto", sans-serif;}
 h3 {
   color:rgb(38, 36, 36);
@@ -98,6 +99,8 @@ h6 {
   padding-bottom: 20px;
   padding-left: 100px;
   padding-right: 100px;
+  display: flex;
+  align-items: stretch;
 }
 
 p {
@@ -184,14 +187,16 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 500px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-home-awards {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 1000px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-company {
@@ -214,7 +219,8 @@ h5 {
   padding: 15px;
   margin-bottom: 5px;
   background-color: whitesmoke;
-  min-height: 325px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-contact li {
@@ -226,7 +232,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 600px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-team li {
@@ -237,7 +244,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 580px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-products li {
@@ -248,7 +256,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 860px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-services li {
@@ -260,7 +269,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 620px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-resources-links {
@@ -281,7 +291,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 600px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 /* ---------------------
