@@ -3,7 +3,7 @@
   ---------------------------- */
 .img-fluid {
   width: 20%;
-  height: 8%;
+  height: auto;
 }
 
 
@@ -37,18 +37,20 @@ a:active {
 body,h1,h2,h4,h5,h6,p, ul {font-family: "Lato", sans-serif;}
 body, html {
   height: 100%;
+  position: relative;
   color: rgb(38, 36, 36);
   line-height: 1.65;
   background-color:whitesmoke;
   scroll-behavior: smooth;
 }
+
 h3 {font-family: "Roboto", sans-serif;}
 h3 {
   color:rgb(38, 36, 36);
   line-height: 1.5;
   background-color:whitesmoke;
   scroll-behavior: smooth;
-  padding-top: 20px;
+  padding-top: 40px;
 }
 
 h6 {
@@ -56,6 +58,10 @@ h6 {
   line-height: 1.5;
   background-color:whitesmoke;
   scroll-behavior: smooth; 
+}
+
+.w3-third {
+  margin-bottom: 30px;
 }
 
 .w3-margin-top {
@@ -76,13 +82,13 @@ h6 {
   margin-left: auto;
   margin-right: auto;
   padding-top: 10px;
-  width: 5%;
-  height: 5%;
+  max-width: 10%;
+  height: auto;
 }
 
 #logo {
-  width: 12%;
-  height: 12%;
+  max-width: 15%;
+  height: auto;
 }
 
 
@@ -95,9 +101,12 @@ h6 {
 
 .w3-row-padding {
   padding-top: 20px;
-  padding-bottom: 20px;
-  padding-left: 100px;
-  padding-right: 100px;
+  padding-left: 50px;
+  padding-right: 50px;
+  margin-bottom: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
 }
 
 p {
@@ -124,13 +133,11 @@ p {
     ---------------------------------- */
 .background {
   background-color:  rgb(194, 194, 204);
-  /* position: absolute; */
 }
 
 #myHeader {
   margin-top: 75px;
   width: 100%;
- 
 }
 
 li {
@@ -149,11 +156,11 @@ h1,h3,h4,h5 {
 }
 
 h4 {
-  padding-left: 40px;
+  /* padding-left: 40px; */
   padding-top: 25px;
   text-align: center;
-  margin-left: 150px;
-  margin-right: 150px;
+  margin-left: 75px;
+  margin-right: 75px;
 }
 
 h5 {
@@ -184,14 +191,16 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 500px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-home-awards {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 1000px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-company {
@@ -214,7 +223,8 @@ h5 {
   padding: 15px;
   margin-bottom: 5px;
   background-color: whitesmoke;
-  min-height: 325px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-contact li {
@@ -226,7 +236,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 600px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-team li {
@@ -237,7 +248,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 580px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-products li {
@@ -248,19 +260,20 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 860px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-services li {
   text-align: left;
 }
 
-
 .w3-card-resources {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 620px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 .w3-card-resources-links {
@@ -281,7 +294,8 @@ h5 {
   box-shadow: 2px 2px 2px 2px #003da5;
   margin-bottom: 50px;
   background-color: whitesmoke;
-  min-height: 600px;
+  min-height: 100%;
+  align-items: stretch;
 }
 
 /* ---------------------
