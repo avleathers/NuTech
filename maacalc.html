@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+<title>MAA Particles per Dose Calculator</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
+<script src="assets/js/index.js"></script>
+
+</head>
+
+<BODY onLoad="checkBrowser()">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-animate-top w3-light-grey">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
+                onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
+
+            <!-- Logo -->
+            <a class="logo-image">
+                <img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
+            <a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Resources</a>
+            <a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Services</a>
+            <a href="./products.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Products</a>
+            <a href="./team.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Team</a>
+            <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Company</a>
+            <a href="./testimonials.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
+            <a href="./index.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
+        </div>
+
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
+            <a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+            <a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
+            <a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
+            <a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
+            <a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
+            <a href="./services.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Services</a>
+            <a href="./resources.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Resources</a>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header class="w3-container w3-theme" id="myHeader">
+        <div class="w3-center">
+            <h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
+            <img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
+            <h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
+                        Inc.</span></i>
+            </h3>
+        </div>
+    </header>
+
+    <div class="background w3-display-container" id="page-container">
+        <div class="w3-center w3-margin-top w3-margin-bottom">
+            <div class="w3-col">
+                <div class="w3-card-resources w3-container">
+                    <p style="font-size:14px;">According to the SNM Lung Scintigraphy 4.0 Procedure Guidelines<sup>1</sup>,
+                        &quot;the usual adult
+                        administered activity [of MAA] is 40–150 MBq (1–4 mCi).&quot;&nbsp; The guidelines
+                        also recommend &quot;the number of particles should be in the range of
+                        200,000–700,000, and freshly prepared Tc99m MAA with
+                        reduced numbers of particles should be considered for patients with
+                        pulmonary hypertension or right-to-left shunting, and in infants and
+                        children. In adults, the number may be reduced to 100,000–200,000
+                        particles without altering the quality of the images for detection
+                        of perfusion defects. Inhomogeneous distribution of activity may
+                        result from a reduction of the number of particles below 100,000 in adults.&quot;&nbsp; </p>
+                    <p style="font-size:14px;">NuTech
+                        is pleased to present the MAA Dose Particle Calculator below that
+                        will assist adherance to the SNM&#39;s guidelines.</p>
+                    <form name="maaparticlecalc" style="width: 455px">
+                        <table style="width: 450px; height: 136px;">
+                            <tr>
+                                <td class="style8" valign="top" style="width: 50%; height: 26px;">Number of Particles in
+                                    Kit
+                                </td>
+                                <td class="style7" valign="top" style="height: 26px"><INPUT NAME="totalparticles"
+                                        TYPE="text" class="Menu" SIZE=30>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="style8" valign="top" style="width: 50%">Total Activity in MAA Kit at Prep
+                                </td>
+                                <td class="style7" valign="top"><INPUT NAME="totalactivity" TYPE="text" class="Menu"
+                                        SIZE=30>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td class="style8" valign="top" style="width: 50%">Desired Dose in mCi</td>
+                                <td class="style7" valign="top"><INPUT NAME="dose" TYPE="text" class="Menu" SIZE=30>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td style="width: 50%" class="style3"><input name="calc" type="button"
+                                        onClick="maapart(this.form)" value="Calculate"><br>
+                                    &nbsp;</td>
+                                <td class="style3"><input name="clear" type="reset" value="Reset" align="middle"><br>
+                                    &nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">
+                                    <hr>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style6" style="width: 50%">
+                                    <p class="style8"><strong>Hours Post Kit Prep</strong></p>
+                                </td>
+                                <td class="style3">
+                                    <p class="style8"><strong>Number of Particles in Dose</strong></p>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">0</span></strong></td>
+                                <td class="style10"><input name="tzero" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">1</span></strong></td>
+                                <td class="style10"><input name="t1h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">2</span></strong></td>
+                                <td class="style10"><input name="t2h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">3</span></strong></td>
+                                <td class="style10"><input name="t3h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">4</span></strong></td>
+                                <td class="style10"><input name="t4h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">5</span></strong></td>
+                                <td class="style10"><input name="t5h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">6</span></strong></td>
+                                <td class="style10"><input name="t6h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">7</span></strong></td>
+                                <td class="style10"><input name="t7h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">8</span></strong></td>
+                                <td class="style10"><input name="t8h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">9</span></strong></td>
+                                <td class="style10"><input name="t9h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">10</span></strong></td>
+                                <td class="style10"><input name="t10h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">11</span></strong></td>
+                                <td class="style10"><input name="t11h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">12</span></strong></td>
+                                <td class="style10"><input name="t12h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">18</span></strong></td>
+                                <td class="style10"><input name="t18h" type="text" size="30"></td>
+                            </tr>
+                            <tr>
+                                <td class="style10" valign="top" style="width: 50%"><strong>
+                                        <span class="style9">24</span></strong></td>
+                                <td class="style10"><input name="t24h" type="text" size="30"></td>
+                            </tr>
+                        </table>
+                    </form>
+                    <br>
+                    <p style="font-size:14px;">DISCLAIMER: All calculations
+                        must be confirmed before use. The authors make no claims of the accuracy of the
+                        information contained herein; and these suggested doses are not a substitute for
+                        clinical judgement. Neither NuTech, NuTechRx.com nor any other party involved in
+                        the preparation or publication of this site shall be liable for any special,
+                        consequential, or exemplary damages resulting in whole or part from any user's
+                        use of or reliance upon this material.
+                    </p>
+                    <br>
+                    <p style="font-size:12px;">1 Society of Nuclear Medicine.  (19 July 2011).  SNM Practice Guideline for Lung Scintigraphy V4.0. Retreived 26 October 2011, from http://interactive.snm.org/docs/Lung_Scintigraphy_V4_Final.pdf</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="w3-mobile">
+        <footer>NuTech, Inc. &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
+        </footer>
+        </div>
+    </footer>
+
+</body>

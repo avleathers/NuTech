@@ -8,6 +8,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
@@ -21,14 +22,14 @@
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
         <div class="w3-bar w3-card w3-animate-top w3-light-grey">
-            <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right"
-                href="javascript:void(0);" onclick="toggleFunction()" title="Toggle Navigation Menu">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
+                onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
             </a>
 
             <!-- Logo -->
             <a class="logo-image">
-                <img src="assets/images/NuTech Banner.jpg" class="img-fluid"></a>
+                <img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
             <a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Resources</a>
             <a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
@@ -39,12 +40,16 @@
                 Our Team</a>
             <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Our Company</a>
-            <a href="./index.html" class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
+            <a href="./testimonials.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
+            <a href="./index.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
         </div>
 
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
             <a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+            <a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
             <a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
             <a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
             <a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
@@ -54,12 +59,13 @@
     </div>
 
     <!-- Header -->
-    <header class="w3-container-home w3-theme w3-padding" id="myHeader">
-        <div class="w3-center">
-            <h4 class="w3-large"><i>Joint Commission Accredited Since 2015</i></h4>
-            <img src="assets/images/GoldSeal_transparent.gif" alt="Gold Seal" width="50" height="50">
-            <h1 class="w3-xxxlarge w3-animate-bottom">Welcome to <i>NuTech, Inc.</i>
-            </h1>
+    <header class="w3-container-home w3-theme w3-padding w3-mobile" id="myHeader">
+        <div class="w3-center-header">
+            <h3 class="w3-xlarge w3-center"><i>Joint Commission Accredited Since 2015</i></h3>
+            <img src="assets/images/GoldSeal_transparent.gif" alt="Gold Seal" class="center">
+            <h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
+                        Inc.</span></i>
+            </h3>
         </div>
     </header>
 
@@ -72,22 +78,30 @@
     <div class="background w3-display-container">
         <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
             <div class="w3-third">
-                <div class="w3-card-home-awards w3-container">
+                <div class="w3-card-home-awards w3-container w3-mobile">
                     <h3>NNSA Recognition Awards</h3><br>
-                    <img src="assets/images/award certificate Tyler.jpg" alt="Wichita Falls" width="100" height="75">
-                    <img src="assets/images/award certificate cs.jpg" alt="Wichita Falls" width="100" height="75">
-                    <img src="assets/images/award certificate wf.jpg" alt="Wichita Falls" width="100" height="75">
+                    <img src="assets/images/award certificate Tyler.jpg" alt="Wichita Falls" width="180em"
+                        height="auto">
+                    <br>
+                    <br>
+                    <img src="assets/images/award certificate cs.jpg" alt="Wichita Falls" width="180em" height="auto">
+                    <br>
+                    <br>
+                    <img src="assets/images/award certificate wf.jpg" alt="Wichita Falls" width="180em" height="auto">
+                    <br>
+                    <br>
                     <p>NuTech, Inc. pharmacies have earned Recognition Award from United States Department of Energy for
                         providing supplies of molybdenum-99/technetium-99m radiopharmaceutical products produced with
                         low
-                        enriched uranium since January 2018. This effort is consistent with the Department of
+                        enriched uranium since January 2018.</p>
+                    <p>This effort is consistent with the Department of
                         Energy/National Nuclear Security Administration's effforts to accelerate the establishment of
                         reliable supplies of Mo-99 produced without highly enriched uranium.</p>
                 </div>
             </div>
 
             <div class="w3-third">
-                <div class="w3-card-home-awards w3-container">
+                <div class="w3-card-home-awards w3-container w3-mobile">
                     <h3>Joint Commission Accreditation</h3><br>
                     <img src="assets/images/GoldSeal_transparent.gif" alt="Joint Commission Accreditation" width="100"
                         height="100">
@@ -103,49 +117,76 @@
                         R. Allen, RPh, President at 903-592-8635 or email. Concerns may also be directed to The Joint
                         Commission by submitting a fax to 630-792-5636 or completing an online form by accessing The
                         Joint
-                        Commission website at www.jointcommission.org and choosing the Contact Us tab.</p>
+                        Commission website at <a href="https://www.jointcommission.org/">www.jointcommission.org</a> and
+                        choosing the Contact Us tab.</p>
                 </div>
             </div>
 
             <div class="w3-third">
-                <div class="w3-card-home-awards w3-container">
+                <div class="w3-card-home-awards w3-container w3-mobile">
                     <h3>Quick Links</h3><br>
                     <i class="fas fa-link w3-margin-bottom w3-text-theme" style="font-size:90px"></i>
                     <ul>
                         <dt>CALCULATORS
                             <ul>
-                                <li>Radioactivity Calculator</li>
-                                <li>Pediatric Dosage Calculator</li>
-                                <li>MMA Dose Particle Calculator</li>
+                                <li><a href="./radcalc.html">Radioactivity</a></li>
+                                <li><a href="./pedcalc.html">Pediatric Dosage</a></li>
+                                <li><a href="./mmacalc.html">MMA Dose Particle</a></li>
                             </ul>
                         </dt>
                         <dt>PATIENT INFORMATION
                             <ul>
-                                <li>Myocardial Perfusion</li>
-                                <li>Skeletal Imaging</li>
-                                <li>Radioiodine Therapy</li>
-                                <li>Terapia de Radioiodine</li>
-                                <li>What is Nucler Medicine?</li>
+                                <li><a href="./assets/documents/Myocardial_Perfusion.pdf">Myocardial Perfusion</a></li>
+                                <li><a href="./assets/documents/Skeletal_Imaging.pdf">Skeletal Imaging</a></li>
+                                <li><a href="./assets/documents/Radioiodine_Therapy.pdf">Radioiodine Therapy</a></li>
+                                <li><a href="./assets/documents/Terapia_de_Radioiodine.pdf">Terapia de Radioiodine</a>
+                                </li>
+                                <li><a href="./compounded.html">Compounded Q&A</a></li>
+                                <li><a href="http://interactive.snm.org/docs/whatisnucmed.pdf">What is Nuclear
+                                        Medicine?</a></li>
                             </ul>
                         </dt>
-                        <dt>HEALTH PHYSICS WOKSHEETS
+                        <dt>HEALTH PHYSICS WORKSHEETS
                             <ul>
-                                <li>Dose Calibrator Decay Linearity Worksheet</li>
-                                <li>Dose Calibrator Accuracy Worksheet</li>
-                                <li>Dose Calibrator Geometry Worksheet</li>
-                                <li>Survey Meter Calibration / Service Request Formn</li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Linearity_Test_Worksheet.pdf">Dose
+                                        Calibrator Decay Linearity</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Accuracy_Test_Worksheet.pdf">Dose
+                                        Calibrator Accuracy</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Geometry_Test_Worksheet.pdf">Dose
+                                        Calibrator Geometry</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Survey Meter
+                                        Calibration</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Service Request
+                                        Form</a></li>
                             </ul>
                         </dt>
-                        <dt>SEALED SOURCE RETURN WOKSHEETS
+                        <dt>SEALED SOURCE RETURN WORKSHEETS
                             <ul>
-                                <li>Sealed Source Receipt and Return Checklist</li>
-                                <li>Documentation of Transport of Source as a LImited Quantity</li>
-                                <li>Shipper's Report (shipping to NuTech Tyler)</li>
-                                <li>Shipper's Report (shipping to NuTech College Station)</li>
-                                <li>Shipper's Report (shipping to NuTech Wichata Falls)</li>
-                                <li>Shipping Label (shipping to NuTech Tyler)</li>
-                                <li>Limited Quantity Label</li>
+                                <li><a href="./assets/documents/Flood_Source_Receipt_and_Return_Check_.pdf">Sealed
+                                        Source Receipt and Return Checklist</a></li>
+                                <li><a href="./assets/documents/Documentation_of_Transport_of_Source_as_a_Limi.pdf">Documentation
+                                        of Transport of Source as a Limited Quantity</a></li>
                             </ul>
+                        </dt>
+                        <dt>SHIPPER'S REPORTS
+                            <ul>
+                                <li><a href="./assets/documents/Shipper_s_Report.pdf">Shipping to
+                                        NuTech Tyler</a></li>
+                                <li><a href="./assets/documents/CSShipperReport.pdf">Shipping to
+                                        NuTech College Station</a></li>
+                                <li><a href="./assets/documents/WFShipperReport.pdf">Shipping to
+                                        NuTech Wichata Falls</a></li>
+                            </ul>
+                        </dt>
+                        <dt>LABELS
+                            <ul>
+                                <li><a href="./assets/documents/Shipping Label.pdf">Shipping to NuTech
+                                        Tyler</a></li>
+                                <li><a href="./assets/documents/Limited Quantity Label.pdf">Shipping Limited
+                                        Quantity</a>
+                                </li>
+                            </ul>
+                        </dt>
                         </dt>
                 </div>
             </div>
@@ -169,7 +210,8 @@
                     <i class="fas fa-users w3-margin-bottom w3-text-theme" style="font-size:90px"></i>
                     <p><i>NuTech</i> currently serves hospitals and clinics throughout East Texas, North Central
                         Texas, and Southern Oklahoma.</p>
-                    <p>Read what Our Customers have to say about <i>NuTech.</i></p>
+                    <p>Visit our <a href="testimonials.html">testimonials</a> page to read what Our Customers have to
+                        say about <i>NuTech.</i></p>
                 </div>
             </div>
 
@@ -191,7 +233,7 @@
 
 
     <!-- Footer -->
-    <footer class="w3-center w3-mobile">
+    <footer class="w3-mobile">
         <footer>NuTech, Inc. &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
         </footer>
         </div>

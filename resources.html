@@ -8,9 +8,10 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
 
 <script src="assets/js/index.js"></script>
 
@@ -28,7 +29,7 @@
 
             <!-- Logo -->
             <a class="logo-image">
-                <img src="assets/images/NuTech Banner.jpg" class="img-fluid"></a>
+                <img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
             <a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Resources</a>
             <a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
@@ -39,6 +40,8 @@
                 Our Team</a>
             <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Our Company</a>
+            <a href="./testimonials.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
             <a href="./index.html"
                 class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
         </div>
@@ -46,11 +49,167 @@
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
             <a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+            <a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
             <a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
             <a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
             <a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
             <a href="./services.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Services</a>
             <a href="./resources.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Resources</a>
+        </div>
+    </div>
+
+
+    <!-- Header -->
+    <header class="w3-container w3-theme" id="myHeader">
+        <div class="w3-center">
+            <h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
+            <img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
+            <h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
+                        Inc.</span></i>
+            </h3>
+        </div>
+    </header>
+
+    <!-- Background Image -->
+    <div class="background w3-display-container">
+        <h4><i>NuTech</i> offers the most diverse range of products available on the market. Please click here to access
+            package inserts.</h4>
+        <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container">
+                    <h3>Calculators and Patient Information</h3><br>
+                    <ul>
+                        <dt>CALCULATORS
+                            <ul>
+                                <li><a href="./radcalc.html">Radioactivity Calculator</a></li>
+                                <li><a href="./pedcalc.html">Pediatric Dosage Calculator</a></li>
+                                <li><a href="./maacalc.html">MMA Dose Particle Calculator</a></li>
+                            </ul>
+                        </dt>
+                        <dt>PATIENT INFORMATION
+                            <ul>
+                                <li><a href="./assets/documents/Myocardial_Perfusion.pdf">Myocardial Perfusion</a></li>
+                                <li><a href="./assets/documents/Skeletal_Imaging.pdf">Skeletal Imaging</a></li>
+                                <li><a href="./assets/documents/Radioiodine_Therapy.pdf">Radioiodine Therapy</a></li>
+                                <li><a href="./assets/documents/Terapia_de_Radioiodine.pdf">Terapia de Radioiodine</a>
+                                </li>
+                                <li><a href="./compounded.html">Compounded Q&A</a></li>
+                                <li><a href="http://interactive.snm.org/docs/whatisnucmed.pdf">What is Nucler
+                                        Medicine?</a></li>
+                            </ul>
+                        </dt>
+                    </ul>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container">
+                    <h3>Worksheets</h3><br>
+                    <ul>
+                        <dt>HEALTH PHYSICS WORKSHEETS
+                            <ul>
+                                <li><a href="./assets/documents/Dose_Calibrator_Linearity_Test_Worksheet.pdf">Dose
+                                        Calibrator Decay Linearity Worksheet</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Accuracy_Test_Worksheet.pdf">Dose
+                                        Calibrator Accuracy Worksheet</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Geometry_Test_Worksheet.pdf">Dose
+                                        Calibrator Geometry Worksheet</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Survey Meter
+                                        Calibration / Service Request Form</a></li>
+                            </ul>
+                        </dt>
+                        <dt>SEALED SOURCE RETURN WORKSHEETS
+                            <ul>
+                                <li><a href="./assets/documents/Flood_Source_Receipt_and_Return_Check_.pdf">Sealed
+                                        Source Receipt and Return Checklist</a></li>
+                                <li><a href="./assets/documents/Documentation_of_Transport_of_Source_as_a_Limi.pdf">Documentation
+                                        of Transport of Source as a Limited Quantity</a></li>
+                                <li><a href="./assets/documents/Shipper_s_Report.pdf">Shipper's Report (shipping to
+                                        NuTech Tyler)</a></li>
+                                <li><a href="./assets/documents/CSShipperReport.pdf">Shipper's Report (shipping to
+                                        NuTech College Station)</a></li>
+                                <li><a href="./assets/documents/WFShipperReport.pdf">Shipper's Report (shipping to
+                                        NuTech Wichata Falls)</a></li>
+                                <li><a href="./assets/documents/Shipping Label.pdf">Shipping Label (shipping to NuTech
+                                        Tyler)</a></li>
+                                <li><a href="./assets/documents/Limited Quantity Label.pdf">Limited Quantity Label</a>
+                                </li>
+                            </ul>
+                        </dt>
+                </div>
+            </div>
+        </div>
+        <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container">
+                    <h3>Industry Links</h3><br>
+                    <ul>
+                        <dt>RADIOPHARMACEUTICAL MANUFACTURERS
+                            <ul>
+                                <li><a href="http://www.us.astellas.com/">Astellas</a>
+                                </li>
+                                <li><a href="http://hcp.xofigo-us.com/index.php">Bayer
+                                        (Xofigo)</a></li>
+                                <li><a href="http://usa.braccoimaging.com/">Bracco</a></li>
+                                <li><a href="http://www.draximage.com/">DraxImage</a></li>
+                                <li><a
+                                        href="http://www3.gehealthcare.com/en/gatekeeper/mdx_gatekeeper?ReturnURL={C9B1D71A-852B-44B0-A8B0-4BF9A3A3C867}">GE
+                                        Healthcare</a></li>
+                                <li><a href="http://www.mallinckrodt.com/">Mallinckrodt Pharmaceuticals</a>
+                                </li>
+                                <li><a href="http://www.lantheus.com/">Lantheus Medical Imaging</a>
+                                </li>
+                                <li><a href="http://www.pharmalucence.com/section.php?sec=49">Pharmalecuence</a></li>
+                            </ul>
+                        </dt>
+                        <dt>NUTECH LINKS
+                            <ul>
+                                <li><a href="./assets/documents/StdBox.pdf">Shipping
+                                        Container Test Standard 10 Shield Box</a></li>
+                                <li><a href="./assets/documents/Heavy1Box.pdf">Shipping
+                                        Container Test Iodine 1 Vial Box</a></li>
+                                <li><a href="./assets/documents/Heavy2Box.pdf">Shipping
+                                        Container Test Iodine 2 Vial Box</a></li>
+                                <li><a href="./assets/documents/nutechgreen.pdf">NuTech Green
+                                        Policy</a></li>
+                            </ul>
+                        </dt>
+                </div>
+            </div>
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container">
+                    <h3>Other Sites of Interest</h3>
+                    <ul>
+                        <li><a href="http://www.pharmacist.com/">American Pharmacist Association</a>
+                        </li>
+                        <li><a href="http://www.asnc.org/">ASNC</a></li>
+                        <li><a href="http://www.bpsweb.org/">Board of Pharmaceutical Specialties</a></li>
+                        <li><a href="http://www.icanl.org/">ICANL</a> - The Intersociatial Commission for the
+                            Accreditation of Nuclear Medicine</li>
+                        <li><a href="http://nuclearpharmacy.uams.edu/">The Nuclear Pharmacy</a> - Hosted by UAMS College
+                            of Pharmacy</li>
+                        <li><a href="http://www.radiologyassistant.org/">Radiology Assistant</a> - A resource for new
+                            college students to find in-depth and unbiased information about picking the right radiology
+                            degree to fit their needs.
+                        </li>
+                        <li><a href="http://www.snm.org/">Society of Nuclear Medicine (SNM)</a>
+                        </li>
+                        <li><a href="http://interactive.snm.org/index.cfm?PageID=4816&RPID=772">SNM Coding Corner</a> -
+                            The most up-to-date and comprehensive source for nuclear medicine coding and reimbursement
+                            on the web.</li>
+                        <li><a href="http://interactive.snm.org/index.cfm?PageID=772&RPID=18">SNM Procedure
+                                Guidelines</a></li>
+                        <li><a href="http://interactive.snm.org/index.cfm?PageID=945&RPID=772">SNM Practice
+                                Accreditation</a></li>
+                        <li><a href="http://swc-snmmi.org/">Southwest Chapter of the Society of Nuclear Medicine</a>
+                        </li>
+                        <li><a href="http://www.tsbp.state.tx.us/">Texas Board of Pharmacy</a></li>
+                        <li><a href="http://www.dshs.state.tx.us/radiation/">Texas Department of State Health Services
+                                Radiation Control Program</a></li>
+                        <li><a href="http://www.nrc.gov/">US Nuclear Regulatory Commission</a></li>
+                        <li><a href="http://www.jointcommission.org/">The Joint Commission</a></li>
+                    </ul>
+                </div>
+            </div>
         </div>
     </div>
 
