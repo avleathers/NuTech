@@ -50,7 +50,7 @@ h3 {
   line-height: 1.5;
   background-color:whitesmoke;
   scroll-behavior: smooth;
-  padding-top: 1em;
+  text-align: center;
 }
 
 h6 {
@@ -78,10 +78,10 @@ h6 {
   margin-top: 0;
 }
 
-.w3-center {
+/* .w3-center {
   padding-top: 40px;
   padding-bottom: 20px;
-}
+} */
 
 .w3-center-header {
   padding-top: 35px;
@@ -144,7 +144,8 @@ p {
 }
 
 #myHeader {
-  margin-top: 75px;
+  margin-top: 5%;
+  padding-top: 5%;
   width: 100%;
 }
 
@@ -337,13 +338,11 @@ footer {
   padding-left: 5%;
   padding-right: 5%;
   margin-bottom: 20px;
-  /* display: flex; */
-  flex-wrap: wrap;
+  margin-right: 15px;
   align-items: stretch;
 }
 
    td,th {
-    /* font-family: Verdana, Arial, Helvetica, sans-serif; */
     font-size: 16px;
    }
 
