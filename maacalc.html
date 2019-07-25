@@ -12,7 +12,7 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
-<script src="assets/js/index.js"></script>
+<script type="text/javascript" src="assets/js/index.js"></script>
 
 </head>
 
@@ -67,11 +67,13 @@
         </div>
     </header>
 
+    <!-- Background -->
     <div class="background w3-display-container" id="page-container">
-        <div class="w3-center w3-margin-top w3-margin-bottom">
-            <div class="w3-row-padding-calc">
-                <div class="w3-card-maacalc w3-container">
-                    <p style="font-size:14px;">According to the SNM Lung Scintigraphy 4.0 Procedure
+        <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container">
+                    <h3>MAA Dose Calculations</h3>
+                    <p style=>According to the SNM Lung Scintigraphy 4.0 Procedure
                         Guidelines<sup>1</sup>,
                         &quot;the usual adult
                         administered activity [of MAA] is 40–150 MBq (1–4 mCi).&quot;&nbsp; The guidelines
@@ -82,8 +84,9 @@
                         children. In adults, the number may be reduced to 100,000–200,000
                         particles without altering the quality of the images for detection
                         of perfusion defects. Inhomogeneous distribution of activity may
-                        result from a reduction of the number of particles below 100,000 in adults.&quot;&nbsp; </p>
-                    <p style="font-size:14px;">NuTech
+                        result from a reduction of the number of particles below 100,000 in
+                        adults.&quot;&nbsp; </p>
+                    <p style=>NuTech
                         is pleased to present the MAA Dose Particle Calculator below that
                         will assist adherance to the SNM&#39;s guidelines.</p>
                     <form name="maaparticlecalc">
@@ -98,7 +101,8 @@
                                     &nbsp;</td>
                             </tr>
                             <tr>
-                                <td class="style8" valign="top" style="width: 50%">Total Activity in MAA Kit at Prep
+                                <td class="style8" valign="top" style="width: 50%">Total Activity in MAA Kit
+                                    at Prep
                                 </td>
                                 <td class="style7" valign="top"><INPUT NAME="totalactivity" TYPE="text" class="Menu"
                                         SIZE=30>
@@ -217,19 +221,95 @@
                         use of or reliance upon this material.
                     </p>
                     <br>
-                    <p style="font-size:12px;">1 Society of Nuclear Medicine. (19 July 2011). SNM Practice Guideline for
+                    <p style="font-size:12px;">1 Society of Nuclear Medicine. (19 July 2011). SNM Practice
+                        Guideline for
                         Lung Scintigraphy V4.0. Retreived 26 October 2011, from <a href="
                         http://interactive.snm.org/docs/Lung_Scintigraphy_V4_Final.pdf">www.interactive.snm.org</a></p>
                 </div>
             </div>
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container w3-mobile">
+                    <h3>Quick Links</h3><br>
+                    <ul>
+                        <dt>CALCULATORS
+                            <ul>
+                                <li><a href="./radcalc.html">Radioactivity</a></li>
+                                <li><a href="./pedcalc.html">Pediatric Dosage</a></li>
+                                <li><a href="./maacalc.html">MAA Dose Particle</a></li>
+                            </ul>
+                        </dt>
+                        <dt>PATIENT INFORMATION
+                            <ul>
+                                <li><a href="./assets/documents/Myocardial_Perfusion.pdf">Myocardial
+                                        Perfusion</a>
+                                </li>
+                                <li><a href="./assets/documents/Skeletal_Imaging.pdf">Skeletal Imaging</a>
+                                </li>
+                                <li><a href="./assets/documents/Radioiodine_Therapy.pdf">Radioiodine
+                                        Therapy</a>
+                                </li>
+                                <li><a href="./assets/documents/Terapia_de_Radioiodine.pdf">Terapia de
+                                        Radioiodine</a>
+                                </li>
+                                <li><a href="./compounded.html">Compounded Q&A</a></li>
+                                <li><a href="http://interactive.snm.org/docs/whatisnucmed.pdf">What is
+                                        Nuclear
+                                        Medicine?</a></li>
+                            </ul>
+                        </dt>
+                        <dt>HEALTH PHYSICS WORKSHEETS
+                            <ul>
+                                <li><a href="./assets/documents/Dose_Calibrator_Linearity_Test_Worksheet.pdf">Dose
+                                        Calibrator Decay Linearity</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Accuracy_Test_Worksheet.pdf">Dose
+                                        Calibrator Accuracy</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Geometry_Test_Worksheet.pdf">Dose
+                                        Calibrator Geometry</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Survey
+                                        Meter
+                                        Calibration</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Service
+                                        Request
+                                        Form</a></li>
+                            </ul>
+                        </dt>
+                        <dt>SEALED SOURCE RETURN WORKSHEETS
+                            <ul>
+                                <li><a href="./assets/documents/Flood_Source_Receipt_and_Return_Check_.pdf">Sealed
+                                        Source Receipt and Return Checklist</a></li>
+                                <li><a href="./assets/documents/Documentation_of_Transport_of_Source_as_a_Limi.pdf">Documentation
+                                        of Transport of Source as a Limited Quantity</a></li>
+                            </ul>
+                        </dt>
+                        <dt>SHIPPER'S REPORTS
+                            <ul>
+                                <li><a href="./assets/documents/Shipper_s_Report.pdf">Shipping to
+                                        NuTech Tyler</a></li>
+                                <li><a href="./assets/documents/CSShipperReport.pdf">Shipping to
+                                        NuTech College Station</a></li>
+                                <li><a href="./assets/documents/WFShipperReport.pdf">Shipping to
+                                        NuTech Wichata Falls</a></li>
+                            </ul>
+                        </dt>
+                        <dt>LABELS
+                            <ul>
+                                <li><a href="./assets/documents/Shipping Label.pdf">Shipping to NuTech
+                                        Tyler</a></li>
+                                <li><a href="./assets/documents/Limited Quantity Label.pdf">Shipping Limited
+                                        Quantity</a>
+                                </li>
+                            </ul>
+                        </dt>
+                        </dt>
+                </div>
+            </div>
         </div>
-    </div>
 
-    <!-- Footer -->
-    <footer class="w3-mobile">
-        <footer>NuTech, Inc. &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
+        <!-- Footer -->
+        <footer class="w3-mobile">
+            <footer>NuTech, Inc. &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
+            </footer>
+            <!-- </div> -->
         </footer>
-        </div>
-    </footer>
 
 </body>
