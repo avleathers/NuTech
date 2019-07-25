@@ -8,6 +8,7 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
@@ -28,7 +29,7 @@
 
             <!-- Logo -->
             <a class="logo-image">
-                <img src="assets/images/NuTech Banner.jpg" class="img-fluid"></a>
+                <img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
             <a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Resources</a>
             <a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
@@ -39,6 +40,8 @@
                 Our Team</a>
             <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Our Company</a>
+            <a href="./testimonials.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
             <a href="./index.html"
                 class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
         </div>
@@ -46,6 +49,7 @@
         <!-- Navbar on small screens -->
         <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
             <a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+            <a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
             <a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
             <a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
             <a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
@@ -54,13 +58,14 @@
         </div>
     </div>
 
-
     <!-- Header -->
     <header class="w3-container w3-theme" id="myHeader">
         <div class="w3-center">
-            <h4 class="w3-xlarge">Nuclear Pharmacy Services</h4>
-            <h1 class="w3-xxxlarge w3-animate-bottom"><i>NuTech, Inc.</i>
-            </h1>
+            <h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
+            <img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
+            <h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
+                        Inc.</span></i>
+            </h3>
         </div>
     </header>
 
@@ -118,12 +123,13 @@
                         <li>NucMed Calculators</li>
                         <li>NucMed Worksheets</li>
                         <li>Patient Information</li>
-                        <li>Compounded Products Q&A</li>
+                        <li><a href="./compounded.html">Compounded Products Q&A</a></li>
                     </ul>
                 </div>
             </div>
         </div>
     </div>
+
 
     <!-- Footer -->
     <footer class="w3-mobile">

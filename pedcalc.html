@@ -1,0 +1,216 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<script type="text/javascript" language="JavaScript"> 
+<!-- start hiding script
+function checkBrowser()
+{
+	var Brow = navigator.appName;
+	var Ver = navigator.appVersion;
+	if (Brow == "Netscape")
+	{
+		if (parseInt(Ver.substring(0,2)) < 3.0)
+		{
+			alert("You are using a stale version of Netscape - some parts of this calculator may not work correctly.  For best results download the latest version of Netscape.")
+		}
+ 
+	}
+	
+}
+ 
+function peddose(form)
+{
+	var wtlb;
+	var wtkg;
+	wt = form.wt.value
+	if (form.unit1[0].checked)
+	{	wtkg = wt
+		wtlb = wt*2.2
+	}
+	else if (form.unit1[1].checked)
+	{	wtkg = wt/2.2
+		wtlb = wt
+	}
+	var dob;
+	var dot;
+	var adltdose = form.adltdose.value;
+	var diff;
+	var mos;
+	var yrs;
+	dob = Date.parse(form.dob.value);
+	dot = Date.parse(form.dot.value);
+	diff = Math.abs(dot-dob);
+	mos = diff/86400000/30;
+	yrs = diff/86400000/365;
+	form.clark.value = wtlb/150*adltdose;
+	form.webster.value = (yrs+1)/(yrs+7)*adltdose;
+	form.bsa.value = (((Math.pow(wtkg,0.7))/11)/1.73)*adltdose;
+	form.young.value = (yrs/(yrs+12))*adltdose;
+	form.fried.value = (mos/150)*adltdose;
+}	
+	
+// stop hiding script -->
+</SCRIPT>
+
+<!-- #BeginTemplate "../Templates/layout3.dwt" -->
+
+<head>
+<!-- #BeginEditable "title" -->
+<title>NuTech Pediatric Dose Calculator</title>
+<!-- #EndEditable -->
+<!-- #BeginEditable "description" -->
+<meta name="description" content="Pediatric Dose Calculations" />
+<!-- #EndEditable -->
+<!-- #BeginEditable "keywords" -->
+<meta name="keywords" content="CNMT, CE, continuing education, nuclear, nuclear pharmacy, pharmacy, radiopharmacy, radiopharmaceutical, health physics, tyler, college station, wichita falls, Danny Allen, NuTech, nuclear medicine" />
+<!-- #EndEditable -->
+<meta http-equiv="imagetoolbar" content="false" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta http-equiv="Content-Language" content="en-us" />
+<link rel="stylesheet" type="text/css" href="../style.css" />
+<link rel="stylesheet" href="../Scripts/lightbox.css" type="text/css" media="screen" />
+<script type="text/javascript" src="../Scripts/lightbox.js"></script>
+<!-- 
+*********************************
+Design by: RTBWizards.com
+Release Date: August 2010
+*********************************
+-->
+</head>
+
+<body>
+
+<div class="wrapper row1">
+<div id="global">
+<!--webbot bot="Include" u-include="../Includes/global.htm" tag="Body" startspan -->
+<ul>
+<li><a href="../index.htm">Home</a></li>
+<li><a href="../industry_links/industry_links.html">Links</a></li>
+<li><a href="../contact/contact.htm">Contact</a> </li>
+</ul>
+<!--webbot bot="Include" endspan i-checksum="14055" -->
+</div>
+</div>
+
+<div class="wrapper row2">
+<div id="header" style="left: 0px; top: 0px; width: 941px">
+	<img alt="" height="104" src="http://nutechrx.com/Templates/NuTech%20Banner.png" width="896" />
+</div>
+</div>
+
+<div class="wrapper row3">
+<div id="mainnav">
+<!--webbot bot="Include" u-include="../Includes/mainnav.htm" tag="Body" startspan -->
+<ul>
+<li><a href="../company/company.htm">Our Company</a></li>
+	<li><a href="../professionals/professionals.htm">Our Professionals</a></li>
+<li><a href="../products/products.htm">Our Products</a></li>
+<li><a href="../services/services.htm">Our Services</a></li>
+<li><a href="../clients/clients.htm">Our Clients</a></li>
+</ul>
+<!--webbot bot="Include" endspan i-checksum="41802" -->
+</div>
+</div>
+
+<div class="wrapper row4">
+<div id="content">
+<!-- #BeginEditable "content" -->
+<div class="contentleft2">
+<h1>Pediatric Dose Calculations</h1>
+<p>
+There are several methods available for estimating pediatric radiopharmaceutical dosages.&nbsp; The concerns of minimizing radiation exposure, while simultaneously optimizing&nbsp; imaging time and quality, are factors that affect the choice of radioactive dosage.<SUP>1</SUP>&nbsp; Because the pediatric patient has a smaller total body size and organ mass, a child could receive many times the radiation dose (rads) of an adult unless a properly adjusted amount of radiopharmaceutical is used.<SUP>2</SUP></p>
+<p>The concept of minimal administered activity is another concern.&nbsp; This relates to the minimal amount of radioactivity below which the study will be inadequate because the count rate is too low and the imaging is unacceptable.<SUP>4</SUP>&nbsp; </p>
+<FORM style="WIDTH: 605px" name=peddosecalc>
+<TABLE style="WIDTH: 604px; HEIGHT: 136px">
+<TBODY>
+<TR>
+<TD class=style3 vAlign=top width="20%"><STRONG><SPAN class=style5>Normal Adult Dose</SPAN></STRONG><BR><INPUT class=Menu size=6 name=adltdose> &nbsp;</TD>
+<TD class=style3 vAlign=top width="20%"><STRONG><SPAN class=style5>Body Weight</SPAN></STRONG><BR><INPUT class=Menu size=6 name=wt><BR><INPUT value=kg type=radio name=unit1>kg<INPUT value=lb type=radio name=unit1>lb &nbsp;</TD>
+<TD class=style3 vAlign=top width="20%"><STRONG><SPAN class=style5>Date of Birth</SPAN></STRONG><BR><INPUT class=Menu value=mm/dd/yyyy size=12 name=dob></TD>
+<TD class=style3 vAlign=top style="width: 20%"><STRONG><SPAN class=style5>Date of Test</SPAN></STRONG><BR><INPUT class=Menu value=mm/dd/yyyy size=12 name=dot> &nbsp;</TD>
+<TD class=style3 vAlign=top width="20%">&nbsp;</TD></TR>
+<TR>
+<TD class=style3>&nbsp;</TD>
+<TD class=style3><BR><INPUT onclick=peddose(this.form) value=Calculate type=button name=calc><BR>&nbsp;<BR></TD>
+<TD class=style3>&nbsp;</TD>
+<TD class=style3 style="width: 20%"><BR><INPUT value=Reset align=middle type=reset name=clear><BR>&nbsp;</TD>
+<TD class=style3>&nbsp;</TD></TR>
+<TR>
+<TD class=style3 vAlign=top><STRONG><SPAN class=style2>BSA</SPAN></STRONG><BR><INPUT size=10 name=bsa> </TD>
+<TD class=style3 vAlign=top><STRONG><SPAN class=style2>Clark's</SPAN></STRONG><BR><INPUT size=10 name=clark> </TD>
+<TD class=style3 vAlign=top><STRONG><SPAN class=style2>Young's</SPAN></STRONG><BR><INPUT size=10 name=young> </TD>
+<TD class=style3 vAlign=top style="width: 20%"><STRONG><SPAN class=style2>Fried's</SPAN></STRONG><BR><INPUT size=10 name=fried> </TD>
+<TD class=style3 vAlign=top><STRONG><SPAN class=style2>Webster's</SPAN></STRONG><BR><INPUT size=10 name=webster> </TD></TR></TBODY></TABLE></FORM>
+<p><FONT size=-2 face="Arial, Helvetica, sans-serif">DISCLAIMER: All calculations must be confirmed before use. The authors make no claims of the accuracy of the information contained herein; and these suggested doses are not a substitute for clinical judgement. Neither NuTech, NuTechRx.com nor any other party involved in the preparation or publication of this site shall be liable for any special, consequential, or exemplary damages resulting in whole or part from any user's use of or reliance upon this material.</FONT></p>
+	<h3>A Note on The Pediatric Dosage Rules</h3>
+<P><STRONG>Clark's Rule</STRONG> is based on proportional body weights as related to the standard weight mean of 150 pounds.&nbsp; When radioactivity dosages are calculated by weight, the required dosage is usually underestimated.&nbsp; One reason this occurs is that the ratios of organ to body weights in infants are greater than those observed in adults for the same organs.</P>
+<P><STRONG>Young's Rule</STRONG> is based on age and it approximates the body weight rule except during the first years of life and adolescence.&nbsp; This rule cannot be used for newborns and consideration must be made for growth variability in growth at any given age.<SUP>5</SUP></P>
+<P><STRONG>Fried's Rule</STRONG> is for pediatric patients who are less than one year of age.&nbsp; If necessary, the minimum dosage requirement may be applied with this rule.<SUP>2</SUP></P>
+<P><STRONG>Webster's Rule </STRONG>(modified Young's Rule) will approximate the area rule (m<SUP>2/3</SUP>) relationship until ages 11 or 12.&nbsp; For older children, Clark's Rule would be more appropriate because Webster's Rule overestimates the dosage in this age group.<SUP>5</SUP></P>
+<P><STRONG>The Body Surface Area Rule</STRONG> (BSA) has been shown, by experience, to achieve the correct dose-response relationship with therapeutic drugs.&nbsp; Therefore, this rule has been adapted for diagnostic dosages.&nbsp; Body surface area (BSA) may be estimated from the body weight since it is proportional to the 0.7 power of body weight.<SUP>6,7</SUP></P>
+<P>Estimation of doses for pediatric patients based on BSA generally provides a good guide for most children above the age of one year.&nbsp; Organ growth and physiological function conform more nearly to BSA than body weight.&nbsp; Typically, hepatic and renal function in young infants exhibit slowed metabolism and excretion compared with that in adults.&nbsp; Also, the total body water and extracellular water, where many drugs distribute, are higher in children that in adults.</P>
+<P>Dosages calculated by weight usually lead to underdosage in children, whereas, dosages calculated by BSA give a higher value, and a better quality study.&nbsp; Unfortunately, when dosages are adjusted by weight, the pediatric patient gets lower radiation absorbed doses, but much longer imaging times are required.<SUP>6</SUP></P>
+<P style="FONT-SIZE: 7pt"><SPAN style="COLOR: #c9c9c9"><SPAN style="FONT-SIZE: xx-small">References</SPAN><BR>1.&nbsp;&nbsp;&nbsp; Kieffer C, Suto P. Management of the pediatric nuclear medicine patient. <EM style="FONT-STYLE: normal">J Nucl Med Technol </EM>1983;11:13-19.<BR>2.&nbsp;&nbsp;&nbsp; Day KE. Method for calculating pediatric radioactive doses.&nbsp; <EM style="FONT-STYLE: normal">Transient Equillibrium</EM> (Squibb Nuclear Alumni Newsletter) 1977;VI,No.1.<BR>3.&nbsp;&nbsp;&nbsp; Treves ST. <EM style="FONT-STYLE: normal">Pediatric Nuclear Medicine.</EM> New York: Springer-Verlag; 1985.<BR>4.&nbsp;&nbsp;&nbsp; Piepz A, Hahn K, et al. A radiopharmaceuticals schedule for imaging in paediatrics. <EM style="FONT-STYLE: normal">Eur J Nucl Med</EM> 1990;17:127-129.<BR>5.&nbsp;&nbsp;&nbsp; Breslow K. The pediatric radiopharmaceutical dose. <EM style="FONT-STYLE: normal">The Monthly Scan </EM>(Radiopharmacy, College of Pharmacy, University of New Mexico); 1979.<BR>6.&nbsp;&nbsp;&nbsp; Kowalsky RJ, Perry JR.<EM style="FONT-STYLE: normal"> Radiopharmaceuticals in Nuclear Medicine Practice.</EM>&nbsp; East Norwalk, CT/Los Altos, CA; Appleton and Lange 1987.<BR>7.&nbsp;&nbsp;&nbsp; Bell EG, McAfee JG, Subramanian G. Radiopharmaceuticals in pediatrics.&nbsp; In James AE, Wagner HN, Cooke RE, eds. Pediatric Nuclear Medicine. Philadelphia: W.B. Saunders, 1974.<BR>8.&nbsp;&nbsp;&nbsp; Shore RM, Hendee WR. Radiopharmaceutical dosage selection for pediatric nuclear medicine. <EM style="FONT-STYLE: normal">J Nucl Med</EM> 1986;27:287-298.</SPAN></P>
+
+</div>
+<div class="contentright">
+<h2>Quick Links</h2>
+<h5>NucMed Calculators</h5>
+	<ul>
+		<li><a href="../RadCalc/RadCalc.htm">Radioactivity Calculator</a></li>
+		<li><a href="../PedCalc/PedCalc.htm">Pediatric Dosage Calculator</a></li>
+		<li><a href="../MAACalc/MAAPartCalc.htm">MAA Dose Particle Calculator</a></li>
+	</ul>
+	<h5>Patient Information</h5>
+	<ul>
+		<li><a href="../Tools/Myocardial_Perfusion.pdf">Myocardial Perfusion</a></li>
+		<li><a href="../Tools/Skeletal_Imaging.pdf">Skeletal Imaging</a></li>
+		<li><a href="../Tools/Radioiodine_Therapy.pdf">Radioiodine Therapy</a></li>
+		<li><a href="../Tools/Terapia_de_Radioiodine.pdf">Terapia de Radioiodine</a></li>
+		<li><a href="http://interactive.snm.org/docs/whatisnucmed.pdf">What is 
+		Nuclear Medicine</a></li>
+	</ul>
+<h5>Health Physics Worksheets</h5>
+	<ul>
+		<li><a href="../Tools/Dose_Calibrator_Linearity_Test_Worksheet.pdf">Dose Calibrator Decay Linearity Worksheet</a></li>
+		<li><a href="../Tools/Dose_Calibrator_Accuracy_Test_Worksheet.pdf">Dose Calibrator Accuracy Worksheet</a></li>
+		<li><a href="../Tools/Dose_Calibrator_Geometry_Test_Worksheet.pdf">Dose Calibrator Geometry Worksheet</a></li>
+		<li><a href="../Tools/Request%20for%20Calibration%20or%20Service.pdf">Survey Meter Calibration/Service Request Form</a></li>
+	</ul>
+	<h5>Sealed Source Return Worksheets</h5>
+	<ul>
+		<li><a href="../Tools/Flood_Source_Receipt_and_Return_Check_.pdf">Sealed Source Receipt and Return Checklist</a></li>
+		<li>
+		<a href="../Tools/Documentation_of_Transport_of_Source_as_a_Limi.pdf">Documentation of Transport of Source as a Limited Quantity</a></li>
+		<li><a href="../Tools/Shipper_s_Report.pdf">Shipper&#39;s Report</a> (shipping to NuTech Tyler)</li>
+		<li><a href="../Tools/CSShipperReport.pdf">Shipper&#39;s Report </a>(shipping to NuTech College Station)</li>
+		<li><a href="../Tools/WFShipperReport.pdf">Shipper&#39;s Report</a> (shipping to NuTech Wichita Falls)</li>
+		<li><a href="../Tools/Shipping%20Label.pdf">Shipping Label </a>(to NuTech Tyler)</li>
+		<li><a href="../Tools/Limited%20Quantity%20Label.pdf">Limited Quantity Label</a></li>
+	</ul>
+</div>
+<!-- #EndEditable -->
+<div class="clearcontent"></div>
+</div>
+</div>
+
+<div class="wrapper row5">
+<div id="footer">
+<!--webbot bot="Include" u-include="../Includes/global.htm" tag="Body" startspan -->
+<ul>
+<li><a href="../index.htm">Home</a></li>
+<li><a href="../industry_links/industry_links.html">Links</a></li>
+<li><a href="../contact/contact.htm">Contact</a> </li>
+</ul>
+<!--webbot bot="Include" endspan i-checksum="14055" -->
+<p>NuTech, Inc. &copy; 2017 | All Rights Reserved | Design by <a href="http://www.rtbwizards.com">RTBWizards.com</a></p>
+<p><br />
+&nbsp;&nbsp;&nbsp; </p>
+</div>
+</div>
+
+</body>
+
+<!-- #EndTemplate -->
+
+</html>
