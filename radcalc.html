@@ -1,98 +1,121 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+<title>Pediatric Dose Calculations</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta http-equiv="X-UA-Compatible" content="ie=edge">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
+<link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+<script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
+<script type="text/javascript" src="assets/js/index.js"></script>
 
-<!-- #BeginTemplate "../Templates/layout4.dwt" -->
-
-<head>
-<!-- #BeginEditable "title" -->
-<title>NuTech Radioactivity Calculator</title>
-<!-- #EndEditable -->
 <!-- #BeginEditable "description" -->
+<meta name="description" content="Pediatric Dose Calculations" />
 <!-- #EndEditable -->
 <!-- #BeginEditable "keywords" -->
-<meta name="keywords" content="CNMT, CE, continuing education, nuclear, nuclear pharmacy, pharmacy, radiopharmacy, radiopharmaceutical, health physics, tyler, college station, wichita falls, Danny Allen, NuTech, nuclear medicine" />
+<meta name="keywords"
+	content="CNMT, CE, continuing education, nuclear, nuclear pharmacy, pharmacy, radiopharmacy, radiopharmaceutical, health physics, tyler, college station, wichita falls, Danny Allen, NuTech, nuclear medicine" />
 <!-- #EndEditable -->
 <meta http-equiv="imagetoolbar" content="false" />
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <meta http-equiv="Content-Language" content="en-us" />
-<link rel="stylesheet" type="text/css" href="../style.css" />
-<link rel="stylesheet" href="../Scripts/lightbox.css" type="text/css" media="screen" />
-<script type="text/javascript" src="../Scripts/lightbox.js"></script>
-<!-- 
+
 *********************************
 Design by: RTBWizards.com
 Release Date: August 2010
 *********************************
 -->
+
 </head>
 
 <body>
+	<BODY onLoad="checkBrowser()">
+		<!-- Navbar (sit on top) -->
+		<div class="w3-top">
+			<div class="w3-bar w3-card w3-animate-top w3-light-grey">
+				<a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
+					onclick="toggleFunction()" title="Toggle Navigation Menu">
+					<i class="fa fa-bars"></i>
+				</a>
 
-<div class="wrapper row1">
-<div id="global">
-<!--webbot bot="Include" u-include="../Includes/global.htm" tag="Body" startspan -->
-<ul>
-<li><a href="../index.htm">Home</a></li>
-<li><a href="../industry_links/industry_links.html">Links</a></li>
-<li><a href="../contact/contact.htm">Contact</a> </li>
-</ul>
-<!--webbot bot="Include" endspan i-checksum="14055" -->
-</div>
-</div>
+				<!-- Logo -->
+				<a class="logo-image">
+					<img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
+				<a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+					Resources</a>
+				<a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+					Our Services</a>
+				<a href="./products.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+					Our Products</a>
+				<a href="./team.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+					Our Team</a>
+				<a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+					Our Company</a>
+				<a href="./testimonials.html"
+					class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
+				<a href="./index.html"
+					class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
+			</div>
 
-<div class="wrapper row2">
-<div id="header" style="left: 0px; top: 0px; width: 940px">
-	<img alt="" height="104" src="http://nutechrx.com/Templates/NuTech%20Banner.png" width="896" />
-</div>
-</div>
+			<!-- Navbar on small screens -->
+			<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
+				<a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+				<a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
+				<a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
+				<a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
+				<a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
+				<a href="./services.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Services</a>
+				<a href="./resources.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Resources</a>
+			</div>
+		</div>
 
-<div class="wrapper row3">
-<div id="mainnav">
-<!--webbot bot="Include" u-include="../Includes/mainnav.htm" tag="Body" startspan -->
-<ul>
-<li><a href="../company/company.htm">Our Company</a></li>
-	<li><a href="../professionals/professionals.htm">Our Professionals</a></li>
-<li><a href="../products/products.htm">Our Products</a></li>
-<li><a href="../services/services.htm">Our Services</a></li>
-<li><a href="../clients/clients.htm">Our Clients</a></li>
-</ul>
-<!--webbot bot="Include" endspan i-checksum="41802" -->
-</div>
-</div>
+		<!-- Header -->
+		<header class="w3-container w3-theme" id="myHeader">
+			<div class="w3-center">
+				<h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
+				<img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
+				<h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
+							Inc.</span></i>
+				</h3>
+			</div>
+		</header>
 
-<div class="wrapper row4">
-<div id="content">
-<!-- #BeginEditable "content" -->
-<div class="contentleft3" style="width: 941px">
-<h1>Radioactivity Calculator</h1>
-<iframe src="isotopes.htm" style="width: 685px; height: 61px;" scrolling="no" name="Isotopes" title="Choose an isotope"></iframe>
-<iframe src="calc.htm" style="width:685px; height:450px" scrolling="no" name="Calculator" title="Radioactivity Calculator"></iframe>
-<p>NuTech would like to thank <a href="http://www.recordridge.com/">
-RecordRidge.com</a> for the development of this calculator and allowing us to 
-use it on NuTechRx.com.</p>
-</div>
-<!-- #EndEditable -->
-<div class="clearcontent"></div>
-</div>
-</div>
+		<!-- Background -->
 
-<div class="wrapper row5">
-<div id="footer">
-<!--webbot bot="Include" u-include="../Includes/global.htm" tag="Body" startspan -->
-<ul>
-<li><a href="../index.htm">Home</a></li>
-<li><a href="../industry_links/industry_links.html">Links</a></li>
-<li><a href="../contact/contact.htm">Contact</a> </li>
-</ul>
-<!--webbot bot="Include" endspan i-checksum="14055" -->
-<p>NuTech &copy; 2017 | All Rights Reserved | Design by <a href="http://www.rtbwizards.com">RTBWizards.com</a></p>
-<p><br />
-&nbsp;&nbsp;&nbsp; </p>
-</div>
-</div>
+		
 
-</body>
+		<div class="wrapper row4">
+			<div id="content">
+				<!-- #BeginEditable "content" -->
+				<div class="contentleft3" style="width: 941px">
+					<h1>Radioactivity Calculator</h1>
+					<iframe src="isotopes.htm" style="width: 685px; height: 61px;" scrolling="no" name="Isotopes"
+						title="Choose an isotope"></iframe>
+					<iframe src="calc.htm" style="width:685px; height:450px" scrolling="no" name="Calculator"
+						title="Radioactivity Calculator"></iframe>
+					<p>NuTech would like to thank <a href="http://www.recordridge.com/">
+							RecordRidge.com</a> for the development of this calculator and allowing us to
+						use it on NuTechRx.com.</p>
+				</div>
+				<!-- #EndEditable -->
+				<div class="clearcontent"></div>
+			</div>
+		</div>
 
-<!-- #EndTemplate -->
+		<!-- Footer -->
+	<footer class="w3-mobile">
+			<footer><i>NuTech, Inc.</i> &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
+			</footer>
+			<!-- </div> -->
+		</footer>
+	
+	</body>
+
+	<!-- #EndTemplate -->
 
 </html>
