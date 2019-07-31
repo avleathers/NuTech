@@ -2,7 +2,7 @@
   Nav Bar and Logo on All Pages
   ---------------------------- */
 .img-fluid {
-  width: 25%;
+  width: 250px;
   height: auto;
 }
 
@@ -78,8 +78,9 @@ h6 {
   margin-top: 0;
 }
 
-.w3-center-header {
-  padding-top: 35px;
+.w3-center {
+  padding-top: 8px;
+  margin-top: 18px;
 }
 
 .center {
@@ -92,7 +93,7 @@ h6 {
 }
 
 #logo {
-  max-width: 15%;
+  width: auto;
   height: auto;
 }
 
@@ -107,9 +108,12 @@ h6 {
   padding-left: 5%;
   padding-right: 5%;
   margin-bottom: 20px;
+  display: -webkit-flex; 
+  -webkit-flex-wrap: wrap;
   display: flex;
   flex-wrap: wrap;
   align-items: stretch;
+
 }
 
 p {
@@ -123,12 +127,23 @@ p {
 /* Create a Parallax Effect */
 /* First image (Full height) */
 .bgimg-1 {
-  background-image: url("../images/bgimage1.jpg");
-  height: 100%;
+  /* background-image: url("../images/bgimage1.jpg"); */
+  background-image: url("../images/brainscan.jpg");
+  /* height: 100%; */
+  /* width: auto; */
+  height: 500px;
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
-  background-size: cover;
+  /* background-size: cover; */
+  background-size: 100% auto;
+  /* opacity: 0.5; */
+}
+
+@media screen and (max-width: 768px) {
+	.bgimg-1 {
+		background-attachment: fixed;
+	}
 }
 
 /* ----------------------------------
@@ -160,7 +175,6 @@ h1,h3,h4,h5 {
 }
 
 h4 {
-  /* padding-left: 40px; */
   padding-top: 25px;
   text-align: center;
   margin-left: 75px;
@@ -168,7 +182,6 @@ h4 {
 }
 
 h5 {
-  /* padding-left: 40px; */
   padding-top: 15px;
   line-height: .75;
 }
@@ -349,14 +362,17 @@ footer {
     color: #C0C0C0;
     font-size: 14px;
   }
+
   .style6 {
     font-size: 14px;
     text-align: center;
   }
   .style7 {
     font-size: 14px;
-    text-align: right;
+    text-align: left;
+    padding-left: 20px;
   }
+
   .style8 {
     text-align: center;
     font-size: 14px;
@@ -369,4 +385,7 @@ footer {
     font-size: 14px;
   }
 
-
+/* -------------------------------
+   Fix box display issue in Safari
+   ------------------------------- */
+  
