@@ -1,391 +1,427 @@
 /* ---------------------------
   Nav Bar and Logo on All Pages
   ---------------------------- */
-.img-fluid {
-  width: 250px;
-  height: auto;
-}
-
-.w3-top {
-  /* background-color: rgb(233, 237, 249); */
-  background-color: white;
-}
-
-a:link {
-  color:  #003da5;
-  text-decoration: none;
-}
-
-a:visited {
-  color:  #003da5;
-  text-decoration: none;
-}
-
-a:hover {
-  color: #003da5;
-  text-decoration: none;
-}
-
-a:active {
-  color: #003da5;
-  text-decoration: none;
-}
-/* ---------------------
-  All Pages
-  --------------------- */
-
-body,h1,h2,h4,h5,h6,p,ul,td,th {font-family: "Lato", sans-serif;}
-body, html {
-  height: 100%;
-  position: relative;
-  color: rgb(38, 36, 36);
-  line-height: 1.65;
-  background-color:whitesmoke;
-  scroll-behavior: smooth;
-}
-
-h3 {font-family: "Roboto", sans-serif;}
-h3 {
-  color:rgb(38, 36, 36);
-  line-height: 1.5;
-  background-color:whitesmoke;
-  scroll-behavior: smooth;
-  text-align: center;
-}
-
-h6 {
-  color:rgb(38, 36, 36);
-  line-height: 1.5;
-  background-color:whitesmoke;
-  scroll-behavior: smooth; 
-}
-
-.w3-third {
-  margin-bottom: 30px;
-}
-
-.w3-half {
-  margin-bottom: 30px;
-}
-
-.w3-col {
-  margin-bottom: 30px;
-  padding-left: 30%;
-  padding-right: 30%;
-}
-
-.w3-margin-top {
-  margin-top: 0;
-}
-
-.w3-center {
-  padding-top: 8px;
-  margin-top: 18px;
-}
-
-.center {
-  display: block;
-  margin-left: auto;
-  margin-right: auto;
-  padding-top: 10px;
-  max-width: 10%;
-  height: auto;
-}
-
-#logo {
-  width: auto;
-  height: auto;
-}
-
-.w3-center-testamonials {font-family: "Roboto", sans-serif;}
-.w3-center-testamonials {
-  padding-top: 20px;
-  padding-bottom: 5px;
-}
-
-.w3-row-padding {
-  padding-top: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-bottom: 20px;
-  display: -webkit-flex; 
-  -webkit-flex-wrap: wrap;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: stretch;
-
-}
-
-p {
-  font-size: 18px;
-  text-align: left;
-}
-
-/* ----------------
-    Home Page
-    ---------------- */
-/* Create a Parallax Effect */
-/* First image (Full height) */
-.bgimg-1 {
-  /* background-image: url("../images/bgimage1.jpg"); */
-  background-image: url("../images/brainscan.jpg");
-  /* height: 100%; */
-  /* width: auto; */
-  height: 500px;
-  background-attachment: fixed;
-  background-position: center;
-  background-repeat: no-repeat;
-  /* background-size: cover; */
-  background-size: 100% auto;
-  /* opacity: 0.5; */
-}
-
-@media screen and (max-width: 768px) {
-	.bgimg-1 {
-		background-attachment: fixed;
-	}
-}
-
-/* ----------------------------------
-    Background  all but home page
-    ---------------------------------- */
-.background {
-  background-color:  rgb(194, 194, 204);
-}
-
-#myHeader {
-  margin-top: 5%;
-  padding-top: 5%;
-  width: 100%;
-}
-
-li {
-  font-size: 16px;
-  list-style-type: square;
-  text-align: left;
-}
-
-dt {
-  text-align: left;
-  font-size: 18px;
-}
-
-h1,h3,h4,h5 {
-  font-weight: 900;
-}
-
-h4 {
-  padding-top: 25px;
-  text-align: center;
-  margin-left: 75px;
-  margin-right: 75px;
-}
-
-h5 {
-  padding-top: 15px;
-  line-height: .75;
-}
-
-.i {
-  font-size: 120px;
-}
-
-.w3-container-home {
-    margin-top: 6%;   
-}
-
-#page-container {
-    position: relative;
-    min-height: 150vh;
-    padding-bottom: 10vh;
-}
-
-#content-wrap {
-  padding-bottom: 2.5rem; 
-}
-
-.w3-card-home {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-home-awards {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-company {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  padding: 15px;
-  margin-bottom: 5px;
-  background-color: whitesmoke;
-}
-
-.w3-card-company p {
-  text-align: left;
-}
-
-.w3-card-company li {
-  text-align: left;
-}
-
-.w3-card-contact {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  padding: 15px;
-  margin-bottom: 5px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-contact li {
-  text-align: left;
-  list-style-type: none;
-}
-
-.w3-card-team {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-team li {
-  text-align: left;
-}
-
-.w3-card-products {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-products li {
-  text-align: left;
-}
-
-.w3-card-services {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-services li {
-  text-align: left;
-}
-
-.w3-card-resources {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-.w3-card-resources-links {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  padding-left: 50px;
-  padding-right: 50px;
-  margin-left: 300px;
-  margin-right: 300px;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-}
-
-.w3-card-resources-links li {
-  text-align: left;
-}
-
-.w3-card-compound {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  background-color: whitesmoke;
-  min-height: 100%;
-  align-items: stretch;
-}
-
-/* ---------------------
-  Footer - All Pages
-  --------------------- */
-footer {
-  position: fixed;
-  bottom: 0;
-  width: 100%;
-  background-color: #003da5;
-  color: whitesmoke;
-  text-align: center;
-  padding-top: 2px; 
-  padding-bottom: 2px;
-}
-
-/* ---------------
-   MAA Calculator
-   --------------- */
-
-.w3-card-maacalc {
-  box-shadow: 2px 2px 2px 2px #003da5;
-  margin-bottom: 50px;
-  margin-left: 20px;
-  background-color: whitesmoke;
-  min-height: 100%;
-}
-
-.w3-row-padding-calc {
-  padding-top: 20px;
-  padding-left: 5%;
-  padding-right: 5%;
-  margin-bottom: 20px;
-  margin-right: 15px;
-  align-items: stretch;
-}
-
-   td,th {
-    font-size: 16px;
-   }
-
-   .style3 {
-    text-align: center;
-    font-size: 14px;
+  .img-fluid {
+    width: 500px;
+    height: auto;
   }
-  .style4 {
-    color: #C0C0C0;
-    font-size: 14px;
-  }
-
-  .style6 {
-    font-size: 14px;
-    text-align: center;
-  }
-  .style7 {
-    font-size: 14px;
-    text-align: left;
-    padding-left: 20px;
-  }
-
-  .style8 {
-    text-align: center;
-    font-size: 14px;
-  }
-  .style9 {
-    font-size: 14px;
-  }
-  .style10 {
-    text-align: right;
-    font-size: 14px;
-  }
-
-/* -------------------------------
-   Fix box display issue in Safari
-   ------------------------------- */
   
+  .w3-top {
+    /* background-color: rgb(233, 237, 249); */
+    background-color: white;
+  }
+  
+  a:link {
+    color:  #003da5;
+    text-decoration: none;
+  }
+  
+  a:visited {
+    color:  #003da5;
+    text-decoration: none;
+  }
+  
+  a:hover {
+    color: #003da5;
+    text-decoration: none;
+  }
+  
+  a:active {
+    color: #003da5;
+    text-decoration: none;
+  }
+  /* ---------------------
+    All Pages
+    --------------------- */
+  
+  body,h1,h2,h4,h5,h6,p,ul,td,th {font-family: "Lato", sans-serif;}
+  body, html {
+    height: 100%;
+    position: relative;
+    color: rgb(38, 36, 36);
+    line-height: 1.65;
+    background-color:whitesmoke;
+    scroll-behavior: smooth;
+  }
+  
+  h3 {font-family: "Roboto", sans-serif;}
+  h3 {
+    color:rgb(38, 36, 36);
+    line-height: 1.5;
+    background-color:whitesmoke;
+    scroll-behavior: smooth;
+    text-align: center;
+  }
+  
+  h6 {
+    color:rgb(38, 36, 36);
+    line-height: 1.5;
+    background-color:whitesmoke;
+    scroll-behavior: smooth; 
+  }
+  
+  .w3-third {
+    margin-bottom: 30px;
+  }
+  
+  .w3-half {
+    margin-bottom: 30px;
+  }
+  
+  .w3-col {
+    margin-bottom: 30px;
+    padding-left: 30%;
+    padding-right: 30%;
+  }
+  
+  .w3-margin-top {
+    margin-top: 0;
+  }
+  
+  .w3-center {
+    padding-top: 8px;
+    margin-top: 18px;
+  }
+  
+  .center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10px;
+    max-width: 10%;
+    height: auto;
+  }
+  
+  #logo {
+    width: auto;
+    height: auto;
+  }
+  
+  .w3-center-testamonials {font-family: "Roboto", sans-serif;}
+  .w3-center-testamonials {
+    padding-top: 20px;
+    padding-bottom: 5px;
+  }
+  
+  .w3-row-padding {
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    display: -webkit-flex; 
+    -webkit-flex-wrap: wrap;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+  
+  }
+  
+  p {
+    font-size: 18px;
+    text-align: left;
+  }
+  
+  /* ----------------
+      Home Page
+      ---------------- */
+  /* Create a Parallax Effect */
+  /* First image (Full height) */
+  .bgimg-1 {
+    /* background-image: url("../images/bgimage1.jpg"); */
+    background-image: url("../images/brainscan.jpg");
+    /* height: 100%; */
+    /* width: auto; */
+    height: 500px;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    /* background-size: cover; */
+    background-size: 100% auto;
+    /* opacity: 0.5; */
+  }
+  
+  @media screen and (max-width: 768px) {
+      .bgimg-1 {
+          background-attachment: fixed;
+      }
+  }
+  
+  /* ----------------------------------
+      Background  all but home page
+      ---------------------------------- */
+  .background {
+    background-color:  rgb(194, 194, 204);
+  }
+  
+  #myHeader {
+    /* margin-top: 5%;
+    padding-top: 5%; */
+    width: 100%;
+  }
+  
+  li {
+    font-size: 16px;
+    list-style-type: square;
+    text-align: left;
+  }
+  
+  dt {
+    text-align: left;
+    font-size: 18px;
+  }
+  
+  h1,h3,h4,h5 {
+    font-weight: 900;
+  }
+  
+  h4 {
+    padding-top: 25px;
+    text-align: center;
+    margin-left: 75px;
+    margin-right: 75px;
+  }
+  
+  h5 {
+    padding-top: 15px;
+    line-height: .75;
+  }
+  
+  .i {
+    font-size: 120px;
+  }
+  
+  .w3-container-home {
+      margin-top: 6%;   
+  }
+  
+  #page-container {
+      position: relative;
+      min-height: 150vh;
+      padding-bottom: 10vh;
+  }
+  
+  #content-wrap {
+    padding-bottom: 2.5rem; 
+  }
+  
+  .w3-card-home {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-home-awards {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-company {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+  }
+  
+  .w3-card-company p {
+    text-align: left;
+  }
+  
+  .w3-card-company li {
+    text-align: left;
+  }
+  
+  .w3-card-contact {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    padding: 15px;
+    margin-bottom: 5px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-contact li {
+    text-align: left;
+    list-style-type: none;
+  }
+  
+  .w3-card-team {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-team li {
+    text-align: left;
+  }
+  
+  .w3-card-products {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-products li {
+    text-align: left;
+  }
+  
+  .w3-card-services {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-services li {
+    text-align: left;
+  }
+  
+  .w3-card-resources {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  .w3-card-resources-links {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    padding-left: 50px;
+    padding-right: 50px;
+    margin-left: 300px;
+    margin-right: 300px;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+  }
+  
+  .w3-card-resources-links li {
+    text-align: left;
+  }
+  
+  .w3-card-compound {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    background-color: whitesmoke;
+    min-height: 100%;
+    align-items: stretch;
+  }
+  
+  /* ---------------------
+    Footer - All Pages
+    --------------------- */
+  footer {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #003da5;
+    color: whitesmoke;
+    text-align: center;
+    padding-top: 2px; 
+    padding-bottom: 2px;
+  }
+  
+  /* ---------------
+     MAA Calculator
+     --------------- */
+  
+  .w3-card-maacalc {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    margin-bottom: 50px;
+    margin-left: 20px;
+    background-color: whitesmoke;
+    min-height: 100%;
+  }
+  
+  .w3-row-padding-calc {
+    padding-top: 20px;
+    padding-left: 5%;
+    padding-right: 5%;
+    margin-bottom: 20px;
+    margin-right: 15px;
+    align-items: stretch;
+  }
+  
+     td,th {
+      font-size: 16px;
+     }
+  
+     .style3 {
+      text-align: center;
+      font-size: 14px;
+    }
+    .style4 {
+      color: #C0C0C0;
+      font-size: 14px;
+    }
+  
+    .style6 {
+      font-size: 14px;
+      text-align: center;
+    }
+    .style7 {
+      font-size: 14px;
+      text-align: left;
+      padding-left: 20px;
+    }
+  
+    .style8 {
+      text-align: center;
+      font-size: 14px;
+    }
+    .style9 {
+      font-size: 14px;
+    }
+    .style10 {
+      text-align: right;
+      font-size: 14px;
+    }
+  
+  /* -------------------------------
+     Fix box display issue in Safari
+     ------------------------------- */
+    
+ /* ---------------------
+   Make tables responsive 
+   ---------------------- */
+   @media
+only screen and (max-width: 1500px) {
+  table, thead, tbody, th, td, tr {
+    display: block;
+  }
+  thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+  tr { border: 1px solid #ccc; }
+  td {
+    border: none;
+    border-bottom: 1px solid #eee;
+    position: relative;
+    text-align: center;
+    padding: 10px;
+  }
+  td:before {
+    position: absolute;
+    top: 12px;
+    left: 6px;
+    width: 200px;
+    padding-right: 40px;
+    white-space: nowrap;
+    margin-left: -150px;
+  }
+}
+
+b {
+  font-size: 18px;
+  font-weight: bold;
+}
