@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-<title>Pediatric Dose Calculations</title>
+<title>Radioactive Calculator</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="X-UA-Compatible" content="ie=edge">
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-	integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3pro.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
-<script type="text/javascript" src="assets/js/index.js"></script>
+<script type="text/javascript" src="assets/js/isotopes.js"></script>
+<script type="text/javascript" src="assets/js/calc.js"></script>
 
 <!-- #BeginEditable "description" -->
 <meta name="description" content="Pediatric Dose Calculations" />
 <!-- #EndEditable -->
 <!-- #BeginEditable "keywords" -->
 <meta name="keywords"
-	content="CNMT, CE, continuing education, nuclear, nuclear pharmacy, pharmacy, radiopharmacy, radiopharmaceutical, health physics, tyler, college station, wichita falls, Danny Allen, NuTech, nuclear medicine" />
+    content="CNMT, CE, continuing education, nuclear, nuclear pharmacy, pharmacy, radiopharmacy, radiopharmaceutical, health physics, tyler, college station, wichita falls, Danny Allen, NuTech, nuclear medicine" />
 <!-- #EndEditable -->
 <meta http-equiv="imagetoolbar" content="false" />
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
@@ -33,89 +34,492 @@ Release Date: August 2010
 
 </head>
 
-<body>
-	<BODY onLoad="checkBrowser()">
-		<!-- Navbar (sit on top) -->
-		<div class="w3-top">
-			<div class="w3-bar w3-card w3-animate-top w3-light-grey">
-				<a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
-					onclick="toggleFunction()" title="Toggle Navigation Menu">
-					<i class="fa fa-bars"></i>
-				</a>
+<BODY onLoad="checkBrowser()">
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-card w3-animate-top w3-light-grey">
+            <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
+                onclick="toggleFunction()" title="Toggle Navigation Menu">
+                <i class="fa fa-bars"></i>
+            </a>
 
-				<!-- Logo -->
-				<a class="logo-image">
-					<img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
-				<a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
-					Resources</a>
-				<a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
-					Our Services</a>
-				<a href="./products.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
-					Our Products</a>
-				<a href="./team.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
-					Our Team</a>
-				<a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
-					Our Company</a>
-				<a href="./testimonials.html"
-					class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
-				<a href="./index.html"
-					class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
-			</div>
+            <!-- Logo -->
+            <a class="logo-image">
+                <img src="assets/images/NuTech Banner.png" class="img-fluid"></a>
+            <a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Resources</a>
+            <a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Services</a>
+            <a href="./products.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Products</a>
+            <a href="./team.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Team</a>
+            <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
+                Our Company</a>
+            <a href="./testimonials.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Testimonials</a>
+            <a href="./index.html"
+                class="w3-bar-item w3-button w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">Home</a>
+        </div>
 
-			<!-- Navbar on small screens -->
-			<div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
-				<a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
-				<a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
-				<a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
-				<a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
-				<a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
-				<a href="./services.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Services</a>
-				<a href="./resources.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Resources</a>
-			</div>
-		</div>
+        <!-- Navbar on small screens -->
+        <div id="navDemo" class="w3-bar-block w3-light-grey w3-hide w3-hide-large">
+            <a href="./index.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Home</a>
+            <a href="./testimonials.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Testimonials</a>
+            <a href="./company.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Company</a>
+            <a href="./team.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Team</a>
+            <a href="./products.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Products</a>
+            <a href="./services.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Services</a>
+            <a href="./resources.html" class="w3-bar-item w3-button" onclick="toggleFunction()">Resources</a>
+        </div>
+    </div>
 
-		<!-- Header -->
-		<header class="w3-container w3-theme" id="myHeader">
-			<div class="w3-center">
-				<h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
-				<img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
-				<h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
-							Inc.</span></i>
-				</h3>
-			</div>
-		</header>
+    <!-- Header -->
+    <!-- <header class="w3-container w3-theme" id="myHeader">
+        <div class="w3-center">
+            <h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
+            <img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
+            <h3 class="w3-xxxlarge w3-animate-bottom w3-center">Welcome to <i><span style="color: #003da5">NuTech,
+                        Inc.</span></i>
+            </h3>
+        </div>
+    </header> -->
 
-		<!-- Background -->
+    <!-- Calculators -->
+    <div class="background w3-display-container" id="page-container">
+        <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom w3-mobile">
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container w3-mobile">
+                    <h3>Radioactivity Calculator</h3>
+                    <div class="w3-card-resources w3-container w3-mobile">
+                        <FORM style="WIDTH: auto" name=isoform2>
+                            <table class="table">
+                                <TD width="auto" ALIGN=LEFT>
+                                    <p>
+                                        <SELECT NAME="isolist" class="Menu" onFocus="clearinput(this.form)">
+                                            <OPTION VALUE="Calcium 45">Calcium 45&nbsp;
+                                            <OPTION VALUE="Carbon 14">Carbon 14&nbsp;
+                                            <OPTION VALUE="Chromium 51">Chromium 51&nbsp;
+                                            <OPTION VALUE="Hydrogen 3">Hydrogen 3&nbsp;
+                                            <OPTION VALUE="Iodine 125">Iodine 125&nbsp;
+                                            <OPTION VALUE="Phosphorus 32">Phosphorus 32&nbsp;
+                                            <OPTION VALUE="Phosphorus 33">Phosphorus 33&nbsp;
+                                            <OPTION VALUE="Sodium 22">Sodium 22&nbsp;
+                                            <OPTION VALUE="Sulphur 35">Sulphur 35&nbsp;
+                                            <OPTION VALUE="Actinium 227">Actinium 227&nbsp;
+                                            <OPTION VALUE="Aluminum 26">Aluminum 26&nbsp;
+                                            <OPTION VALUE="Aluminum 29">Aluminum 29&nbsp;
+                                            <OPTION VALUE="Americium 241">Americium 241&nbsp;
+                                            <OPTION VALUE="Antimony 124">Antimony 124&nbsp;
+                                            <OPTION VALUE="Arsenic 74">Arsenic 74&nbsp;
+                                            <OPTION VALUE="Barium 128">Barium 128&nbsp;
+                                            <OPTION VALUE="Barium 133">Barium 133&nbsp;
+                                            <OPTION VALUE="Barium 140">Barium 140&nbsp;
+                                            <OPTION VALUE="Beryllium 7">Beryllium 7&nbsp;
+                                            <OPTION VALUE="Bismuth 207">Bismuth 207&nbsp;
+                                            <OPTION VALUE="Bismuth 210">Bismuth 210&nbsp;
+                                            <OPTION VALUE="Bromine 77">Bromine 77&nbsp;
+                                            <OPTION VALUE="Bromine 82">Bromine 82&nbsp;
+                                            <OPTION VALUE="Cadmium 109">Cadmium 109&nbsp;
+                                            <OPTION VALUE="Carbon 11">Carbon 11&nbsp;
+                                            <OPTION VALUE="Cerium 141">Cerium 141&nbsp;
+                                            <OPTION VALUE="Cerium 144">Cerium 144&nbsp;
+                                            <OPTION VALUE="Cesium 134">Cesium 134&nbsp;
+                                            <OPTION VALUE="Cesium 137">Cesium 137&nbsp;
+                                            <OPTION VALUE="Chlorine 36">Chlorine 36&nbsp;
+                                            <OPTION VALUE="Cobalt 57">Cobalt 57&nbsp;
+                                            <OPTION VALUE="Cobalt 58">Cobalt 58&nbsp;
+                                            <OPTION VALUE="Cobalt 60">Cobalt 60&nbsp;
+                                            <OPTION VALUE="Copper 61">Copper 61&nbsp;
+                                            <OPTION VALUE="Copper 62">Copper 62&nbsp;
+                                            <OPTION VALUE="Copper 64">Copper 64&nbsp;
+                                            <OPTION VALUE="Copper 67">Copper 67&nbsp;
+                                            <OPTION VALUE="Curium 244">Curium 244&nbsp;
+                                            <OPTION VALUE="Europium 152">Europium 152&nbsp;
+                                            <OPTION VALUE="Fluorine 18">Fluorine 18&nbsp;
+                                            <OPTION VALUE="Gadolinium 153">Gadolinium 153&nbsp;
+                                            <OPTION VALUE="Gallium 67">Gallium 67&nbsp;
+                                            <OPTION VALUE="Germanium 68">Germanium 68&nbsp;
+                                            <OPTION VALUE="Gold 198">Gold 198&nbsp;
+                                            <OPTION VALUE="Hafnium 181">Hafnium 181&nbsp;
+                                            <OPTION VALUE="Indium 111">Indium 111&nbsp;
+                                            <OPTION VALUE="Indium 113m">Indium 113m&nbsp;
+                                            <OPTION VALUE="Indium 114m">Indium 114m&nbsp;
+                                            <OPTION VALUE="Iodine 123">Iodine 123&nbsp;
+                                            <OPTION VALUE="Iodine 131">Iodine 131&nbsp;
+                                            <OPTION VALUE="Iodine 132">Iodine 132&nbsp;
+                                            <OPTION VALUE="Iridium 192">Iridium 192&nbsp;
+                                            <OPTION VALUE="Iron 52">Iron 52&nbsp;
+                                            <OPTION VALUE="Iron 55">Iron 55&nbsp;
+                                            <OPTION VALUE="Iron 59">Iron 59&nbsp;
+                                            <OPTION VALUE="Krypton 85">Krypton 85&nbsp;
+                                            <OPTION VALUE="Lanthanum 140">Lanthanum 140&nbsp;
+                                            <OPTION VALUE="Lead 210">Lead 210&nbsp;
+                                            <OPTION VALUE="Manganese 52m">Manganese 52m&nbsp;
+                                            <OPTION VALUE="Manganese 54">Manganese 54&nbsp;
+                                            <OPTION VALUE="Manganese 56">Manganese 56&nbsp;
+                                            <OPTION VALUE="Mercury 197">Mercury 197&nbsp;
+                                            <OPTION VALUE="Mercury 203">Mercury 203&nbsp;
+                                            <OPTION VALUE="Molybdenum 99">Molybdenum 99&nbsp;
+                                            <OPTION VALUE="Neodymium 147">Neodymium 147&nbsp;
+                                            <OPTION VALUE="Neptunium 237">Neptunium 237&nbsp;
+                                            <OPTION VALUE="Nickel 63">Nickel 63&nbsp;
+                                            <OPTION VALUE="Niobium 94">Niobium 94&nbsp;
+                                            <OPTION VALUE="Niobium 95">Niobium 95&nbsp;
+                                            <OPTION VALUE="Nitrogen 13">Nitrogen 13&nbsp;
+                                            <OPTION VALUE="Oxygen 15">Oxygen 15&nbsp;
+                                            <OPTION VALUE="Polonium 208">Polonium 208&nbsp;
+                                            <OPTION VALUE="Polonium 210">Polonium 210&nbsp;
+                                            <OPTION VALUE="Potassium 38">Potassium 38&nbsp;
+                                            <OPTION VALUE="Potassium 42">Potassium 42&nbsp;
+                                            <OPTION VALUE="Promethium 147">Promethium 147&nbsp;
+                                            <OPTION VALUE="Plutonium 238">Plutonium 238&nbsp;
+                                            <OPTION VALUE="Plutonium 239">Plutonium 239&nbsp;
+                                            <OPTION VALUE="Plutonium 240">Plutonium 240&nbsp;
+                                            <OPTION VALUE="Plutonium 242">Plutonium 242&nbsp;
+                                            <OPTION VALUE="Radium 226">Radium 226&nbsp;
+                                            <OPTION VALUE="Rubidium 82">Rubidium 82&nbsp;
+                                            <OPTION VALUE="Rubidium 86">Rubidium 86&nbsp;
+                                            <OPTION VALUE="Ruthenium 103">Ruthenium 103&nbsp;
+                                            <OPTION VALUE="Ruthenium 106">Ruthenium 106&nbsp;
+                                            <OPTION VALUE="Scandium 46">Scandium 46&nbsp;
+                                            <OPTION VALUE="Selenium 75">Selenium 75&nbsp;
+                                            <OPTION VALUE="Silver 110">Silver 110&nbsp;
+                                            <OPTION VALUE="Silver 111">Silver 111&nbsp;
+                                            <OPTION VALUE="Sodium 24">Sodium 24&nbsp;
+                                            <OPTION VALUE="Strontium 82">Strontium 82&nbsp;
+                                            <OPTION VALUE="Strontium 85">Strontium 85&nbsp;
+                                            <OPTION VALUE="Strontium 89">Strontium 89&nbsp;
+                                            <OPTION VALUE="Strontium 90">Strontium 90&nbsp;
+                                            <OPTION VALUE="Technetium 99m">Technetium 99m&nbsp;
+                                            <OPTION VALUE="Technetium 99">Technetium 99&nbsp;
+                                            <OPTION VALUE="Thallium 201">Thallium 201&nbsp;
+                                            <OPTION VALUE="Thallium 204">Thallium 204&nbsp;
+                                            <OPTION VALUE="Thorium 228">Thorium 228&nbsp;
+                                            <OPTION VALUE="Thorium 229">Thorium 229&nbsp;
+                                            <OPTION VALUE="Thorium 230">Thorium 230&nbsp;
+                                            <OPTION VALUE="Thorium 232">Thorium 232&nbsp;
+                                            <OPTION VALUE="Tin 113">Tin 113&nbsp;
+                                            <OPTION VALUE="Tin 119m">Tin 119m&nbsp;
+                                            <OPTION VALUE="Uranium 233">Uranium 233&nbsp;
+                                            <OPTION VALUE="Uranium 234">Uranium 234&nbsp;
+                                            <OPTION VALUE="Uranium 235">Uranium 235&nbsp;
+                                            <OPTION VALUE="Uranium 236">Uranium 236&nbsp;
+                                            <OPTION VALUE="Uranium 238">Uranium 238&nbsp;
+                                            <OPTION VALUE="Vanadium 48">Vanadium 48&nbsp;
+                                            <OPTION VALUE="Xenon 133">Xenon 133&nbsp;
+                                            <OPTION VALUE="Xenon 135">Xenon 135&nbsp;
+                                            <OPTION VALUE="Yttrium 87">Yttrium 87&nbsp;
+                                            <OPTION VALUE="Yttrium 90">Yttrium 90&nbsp;
+                                            <OPTION VALUE="Zinc 62">Zinc 62&nbsp;
+                                            <OPTION VALUE="Zinc 65">Zinc 65&nbsp;
+                                        </SELECT>
+                                        <INPUT NAME="select" TYPE="button" onClick="topechoose(this.form)"
+                                            VALUE="Select">
+                                    </p>
+                                </TD>
+                                <TD width="auto">
+                                    <p><B>Isotope</B>
+                                        <INPUT NAME="topename" TYPE="text" SIZE=6>
+                                        <B>Half-life (T<sub>1/2</sub>)</B>
+                                        <INPUT NAME="halflife" TYPE="text" SIZE=12>
+                                        <INPUT NAME="timeunit" TYPE="text" SIZE=1>
+                                    </p>
+                                </TD>
+                                </td>
+                            </table>
+                        </FORM>
+                    </div>
 
-		
+                    <!-- Calculator -->
+                    <FORM NAME="isoform">
+                        <div class="w3-card-resources w3-container w3-mobile">
+                            <table width="auto">
+                                <tr>
+                                    <th></th><b>Radioactive Decay</b></th>
+                                    <tr></tr>
+                                    <td><b>N=N<sub>o</sub>e<sup>-(0.693t/T<sub>&frac12;</sub>)</sup></b>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>Initial activity (N<sub>o</sub>)</td>
+                                    <td><input name="initact" type="text" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td>Decay time (t)</td>
+                                    <td><input name="decayt" type="text" size="10"></td>
+                                </tr>
+                                <tr>
+                                    <td>Time units
+                                        <input type="radio" name="decayu" value="d">
+                                        s
+                                        <input type="radio" name="decayu" value="y">
+                                        m
+                                        <input type="radio" name="decayu" value="h">
+                                        h
+                                        <input type="radio" name="decayu" value="d">
+                                        d
+                                        <input type="radio" name="decayu" value="y">
+                                        y</td>
+                                </tr>
+                                <tr>
+                                    <td><input name="calc1" type="button" onClick="calcdecay(this.form)"
+                                            value="Calculate"></td>
+                                </tr>
+                                <tr>
+                                    <td>Final activity (N)</td>
+                                    <td><input name="finact" type="text" size="10"></td>
+                                </tr>
+                            </table>
+                        </div>
+                        <td>
+                            <div class="w3-card-resources w3-container w3-mobile">
+                                <table width="auto">
+                                    <tr>
+                                        <th></th><b>Timed Decay</b></th>
+                                        <tr></tr>
+                                        <td><b>t = -(T<sub>&frac12;</sub>/0.693) *
+                                                ln(N/N<sub>o</sub>)</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Initial activity (N<sub>o</sub>)</td>
+                                        <td><input name="initact2" type="text" size="10"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Final activity (N)</td>
+                                        <td><input name="finact2" type="text" size="10"></td>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="calc2" type="button" onClick="calcTdecay(this.form)"
+                                                value="Calculate"></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decay time (t)</td>
+                                        <td><input name="decayt2" type="text" size=10>
+                                            <input type="text" name="Tunit" size=1></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        </td>
+                        <td>
+                            <div class="w3-card-resources w3-container w3-mobile">
+                                <table width="auto">
+                                    <tr>
+                                        <th></th><b>Timed Solid Disposal</b></th>
+                                        <tr></tr>
+                                        <td><b>t = -(T<sub>&frac12;</sub>/0.693) *
+                                                ln(D.L./(N<sub>o</sub>/m))</b></td>
+                                    </tr>
+                                    <tr>
+                                        <td>Initial activity (N<sub>o</sub>)</td>
+                                        <td><input type="text" name="initact3" size="10">
+                                            kBq</td>
+                                    </tr>
+                                    <tr>
+                                        <td>mass (m)</td>
+                                        <td><input type="text" name="mass" size="10">
+                                            kg</td>
+                                    </tr>
+                                    <tr>
+                                        <td><input name="calc3" type="button" onClick="calcTdisposal(this.form)"
+                                                value="Calculate">
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>Decay time (t)</td>
+                                        <td><input type="text" name="decayt3" size=10>
+                                            <input type="text" name="Tunit3" size=1></td>
+                                    </tr>
+                                </table>
+                            </div>
+                        </td>
+                        </tr>
+                    </FORM>
+                    <A NAME="lower"></A>
+                    <TR>
+                        <TD>
+                            <FORM NAME="convertU">
+                                <div class="w3-card-resources w3-container w3-mobile">
+                                    <table>
+                                        <th></th><B>Unit Converter</B></th>
+                                        <tr>
+                                            <td>Activity 1 <INPUT NAME="activity1" TYPE="text" SIZE=6>
+                                            </td>
+                                            <td><INPUT TYPE="radio" NAME="unit1" VALUE="kBq">kBq<INPUT TYPE="radio"
+                                                    NAME="unit1" VALUE="MBq">MBq<INPUT TYPE="radio" NAME="unit1"
+                                                    VALUE="GBq">GBq<INPUT TYPE="radio" NAME="unit1"
+                                                    VALUE="uCi">&micro;Ci<INPUT TYPE="radio" NAME="unit1"
+                                                    VALUE="mCi">mCi</td>
+                                        </tr>
+                                        <tr>
+                                            <td>Activity 2 <INPUT NAME="activity2" TYPE="text" SIZE=6>
+                                            </td>
+                                            <td><INPUT TYPE="radio" NAME="unit2" VALUE="kBq"
+                                                    onClick=convertUnit(this.form)>kBq<INPUT TYPE="radio" NAME="unit2"
+                                                    VALUE="MBq" onClick=convertUnit(this.form)>MBq<INPUT TYPE="radio"
+                                                    NAME="unit2" VALUE="GBq" onClick=convertUnit(this.form)>GBq<INPUT
+                                                    TYPE="radio" NAME="unit2" VALUE="uCi"
+                                                    onClick=convertUnit(this.form)>&micro;Ci<INPUT TYPE="radio"
+                                                    NAME="unit2" VALUE="mCi" onClick=convertUnit(this.form)>mCi</td>
+                                        </tr>
+                                        <tr>
+                                            <td><INPUT NAME="clear" TYPE="reset" VALUE="Reset"></td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </FORM>
+                            </FORM>
+                        </TD>
+                        <TD>
+                            <FORM NAME="dateadd">
+                                <div class="w3-card-resources w3-container w3-mobile">
+                                    <table width="auto">
+                                        <tr>
+                                            <th></th><B>Find the Difference Between Two Dates</B>
+                                            </th>
+                                            <tr></tr>
+                                            <td><INPUT NAME="date1" TYPE="text" value="mm/dd/yyyy" SIZE=12>
+                                            </td>
+                                            <td>Date 1</td>
+                                        </tr>
+                                        <tr>
+                                            <td><INPUT NAME="date2" TYPE="text" value="mm/dd/yyyy" SIZE=12>
+                                            </td>
+                                            <td>Date 2</td>
+                                        </tr>
+                                        <tr>
+                                            <td><input name="calc4" type="button" onClick="deldate(this.form)"
+                                                    value="Calculate">
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td><INPUT NAME="days1" TYPE="text" SIZE=12></td>
+                                            <td>Days</td>
+                                        </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </TD>
+                        <TD>
+                            <FORM NAME="dateadd2">
+                                <div class="w3-card-resources w3-container w3-mobile">
+                                    <table width="auto">
+                                        <th></th><B>Add or Subtract A Number of Days To A
+                                                Date</B>
+                                                <tr></tr>
+                                            <tr>
+                                                <td><INPUT NAME="date3" TYPE="text" class="Menu" value="mm/dd/yyyy"
+                                                        SIZE=12></td>
+                                                <td>Date 1</td>
+                                            </tr>
+                                            <tr>
+                                                <td><INPUT NAME="days2" TYPE="text" class="Menu" SIZE=12>
+                                                </td>
+                                                <td>Days</td>
+                                            </tr>
+                                            <tr>
+                                                <td><input name="calc5" type="button" class="Menu"
+                                                        onClick="adddays(this.form)" value="Calculate"></td>
+                                            </tr>
+                                            <tr>
+                                                <td><INPUT NAME="date4" TYPE="text" class="Menu" SIZE=12>
+                                                </td>
+                                                <td>Date 2</td>
+                                            </tr>
+                                    </table>
+                                </div>
+                            </form>
+                        </TD>
 
-		<div class="wrapper row4">
-			<div id="content">
-				<!-- #BeginEditable "content" -->
-				<div class="contentleft3" style="width: 941px">
-					<h1>Radioactivity Calculator</h1>
-					<iframe src="isotopes.htm" style="width: 685px; height: 61px;" scrolling="no" name="Isotopes"
-						title="Choose an isotope"></iframe>
-					<iframe src="calc.htm" style="width:685px; height:450px" scrolling="no" name="Calculator"
-						title="Radioactivity Calculator"></iframe>
-					<p>NuTech would like to thank <a href="http://www.recordridge.com/">
-							RecordRidge.com</a> for the development of this calculator and allowing us to
-						use it on NuTechRx.com.</p>
-				</div>
-				<!-- #EndEditable -->
-				<div class="clearcontent"></div>
-			</div>
-		</div>
+                        <!-- #EndEditable -->
+                        <div class="clearcontent"></div>
+                </div>
+            </div>
 
-		<!-- Footer -->
-	<footer class="w3-mobile">
-			<footer><i>NuTech, Inc.</i> &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
-			</footer>
-			<!-- </div> -->
-		</footer>
-	
-	</body>
+            <div class="w3-half">
+                <div class="w3-card-resources w3-container">
+                    <h3>Quick Links</h3><br>
+                    <ul>
+                        <dt>CALCULATORS
+                            <ul>
+                                <li><a href="./radcalc.html">Radioactivity</a></li>
+                                <li><a href="./pedcalc.html">Pediatric Dosage</a></li>
+                                <li><a href="./maacalc.html">MAA Dose Particle</a></li>
+                            </ul>
+                        </dt>
+                        <dt>PATIENT INFORMATION
+                            <ul>
+                                <li><a href="./assets/documents/Myocardial_Perfusion.pdf">Myocardial Perfusion</a>
+                                </li>
+                                <li><a href="./assets/documents/Skeletal_Imaging.pdf">Skeletal Imaging</a></li>
+                                <li><a href="./assets/documents/Radioiodine_Therapy.pdf">Radioiodine Therapy</a>
+                                </li>
+                                <li><a href="./assets/documents/Terapia_de_Radioiodine.pdf">Terapia de
+                                        Radioiodine</a>
+                                </li>
+                                <li><a href="./compounded.html">Compounded Q&A</a></li>
+                                <li><a href="http://interactive.snm.org/docs/whatisnucmed.pdf">What is Nuclear
+                                        Medicine?</a></li>
+                            </ul>
+                        </dt>
+                        <dt>HEALTH PHYSICS WORKSHEETS
+                            <ul>
+                                <li><a href="./assets/documents/Dose_Calibrator_Linearity_Test_Worksheet.pdf">Dose
+                                        Calibrator Decay Linearity</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Accuracy_Test_Worksheet.pdf">Dose
+                                        Calibrator Accuracy</a></li>
+                                <li><a href="./assets/documents/Dose_Calibrator_Geometry_Test_Worksheet.pdf">Dose
+                                        Calibrator Geometry</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Survey Meter
+                                        Calibration</a></li>
+                                <li><a href="./assets/documents/Request for Calibration or Service.pdf">Service
+                                        Request
+                                        Form</a></li>
+                            </ul>
+                        </dt>
+                        <dt>SEALED SOURCE RETURN WORKSHEETS
+                            <ul>
+                                <li><a href="./assets/documents/Flood_Source_Receipt_and_Return_Check_.pdf">Sealed
+                                        Source Receipt and Return Checklist</a></li>
+                                <li><a href="./assets/documents/Documentation_of_Transport_of_Source_as_a_Limi.pdf">Documentation
+                                        of Transport of Source as a Limited Quantity</a></li>
+                            </ul>
+                        </dt>
+                        <dt>SHIPPER'S REPORTS
+                            <ul>
+                                <li><a href="./assets/documents/Shipper_s_Report.pdf">Shipping to
+                                        <i>NuTech</i> Tyler</a></li>
+                                <li><a href="./assets/documents/CSShipperReport.pdf">Shipping to
+                                        <i>NuTech</i> College Station</a></li>
+                                <li><a href="./assets/documents/WFShipperReport.pdf">Shipping to
+                                        <i>NuTech</i> Wichata Falls</a></li>
+                            </ul>
+                        </dt>
+                        <dt>LABELS
+                            <ul>
+                                <li><a href="./assets/documents/Shipping Label.pdf">Shipping to <i>NuTech</i>
+                                        Tyler</a></li>
+                                <li><a href="./assets/documents/Limited Quantity Label.pdf">Shipping Limited
+                                        Quantity</a>
+                                </li>
+                            </ul>
+                        </dt>
+                        </dt>
+                </div>
+            </div>
+        </div>
+    </div>
 
-	<!-- #EndTemplate -->
+    <!-- Footer -->
+    <footer class="w3-mobile">
+        <footer><i>Allen's NuTech, Inc.</i> &copy; | All Rights Reserved
+        </footer>
+        <!-- </div> -->
+    </footer>
+
+</body>
+
+<!-- #EndTemplate -->
 
 </html>

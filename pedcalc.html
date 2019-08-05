@@ -44,7 +44,7 @@ Release Date: August 2010
 
 			<!-- Logo -->
 			<a class="logo-image">
-				<img src="assets/images/blue_logo.jpg" class="img-fluid"></a>
+				<img src="assets/images/NuTech Banner.png" class="img-fluid"></a>
 			<a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
 				Resources</a>
 			<a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
@@ -74,7 +74,7 @@ Release Date: August 2010
 	</div>
 
 	<!-- Header -->
-	<header class="w3-container w3-theme" id="myHeader">
+	<!-- <header class="w3-container w3-theme" id="myHeader">
 		<div class="w3-center">
 			<h3 class="w3-xlarge">Nuclear Pharmacy Services</h3>
 			<img src="assets/images/Nutech-Logo.jpg" alt="Logo" class="center" id="logo">
@@ -82,13 +82,13 @@ Release Date: August 2010
 						Inc.</span></i>
 			</h3>
 		</div>
-	</header>
+	</header> -->
 
 	<!-- Background -->
 	<div class="background w3-display-container" id="page-container">
 		<div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
 			<div class="w3-half">
-				<div class="w3-card-resources w3-container">
+				<div class="w3-card-resources w3-container w3-mobile">
 					<h3>Pediatric Dose Calculations</h3>
 					<p>
 						There are several methods available for estimating pediatric radiopharmaceutical
@@ -102,52 +102,69 @@ Release Date: August 2010
 						relates to the minimal amount of radioactivity below which the study will be
 						inadequate because the count rate is too low and the imaging is
 						unacceptable.<SUP>4</SUP> </p>
-					<FORM style="WIDTH: 605px" name=peddosecalc>
-						<TABLE style="WIDTH: 604px; HEIGHT: 136px">
-							<TBODY>
-								<TR>
-									<TD class=style3 vAlign=top width="20%"><STRONG><SPAN class=style5>Normal
-												Adult Dose</SPAN></STRONG><BR><INPUT class=Menu size=6 name=adltdose>
-									</TD>
-									<TD class=style3 vAlign=top width="20%"><STRONG><SPAN class=style5>Body
-												Weight</SPAN></STRONG><BR><INPUT class=Menu size=6 name=wt><BR><INPUT
-											value=kg type=radio name=unit1>kg<INPUT value=lb type=radio name=unit1>lb
+					<FORM style="WIDTH: auto" name=peddosecalc>
+						<!-- <div class="table-responsive">
+							<div style="overflow-x:auto;"> -->
+								<table class="table">
+									<!-- <TABLE style="WIDTH: auto; HEIGHT: 136px"> -->
+										<TBODY>
+											<TR>
+												<TD class=style3 vAlign=top width="auto"><STRONG><SPAN
+															class=style5>
+															Normal Adult Dosage</SPAN></STRONG><BR><INPUT class=Menu size=12
+														name=adltdose>
+												</TD>
+												<TD class=style3 vAlign=top width="auto"><STRONG><SPAN class=style5>Body
+															Weight</SPAN></STRONG><BR><INPUT class=Menu size=12
+														name=wt><BR><INPUT value=kg type=radio name=unit1>kg<INPUT
+														value=lb type=radio name=unit1>lb
 
-									</TD>
-									<TD class=style3 vAlign=top width="20%"><STRONG><SPAN class=style5>Date
-												of
-												Birth</SPAN></STRONG><BR><INPUT class=Menu value=mm/dd/yyyy size=12
-											name=dob></TD>
-									<TD class=style3 vAlign=top style="width: 20%"><STRONG><SPAN class=style5>Date of
-												Test</SPAN></STRONG><BR><INPUT class=Menu value=mm/dd/yyyy size=12
-											name=dot> </TD>
-									<TD class=style3 vAlign=top width="20%"></TD>
-								</TR>
-								<TR>
-									<TD class=style3></TD>
-									<TD class=style3><BR><INPUT onclick=peddose(this.form) value=Calculate type=button
-											name=calc><BR><BR></TD>
-									<TD class=style3></TD>
-									<TD class=style3><BR><INPUT value=Reset type=reset
-											name=clear><BR></TD>
-									<TD class=style3></TD>
-								</TR>
-								<TR>
-									<TD class=style3 vAlign=top><STRONG><SPAN class=style2>BSA</SPAN></STRONG><BR><INPUT
-											size=10 name=bsa>
-									</TD>
-									<TD class=style3 vAlign=top><STRONG><SPAN
-												class=style2>Clark's</SPAN></STRONG><BR><INPUT size=10 name=clark> </TD>
-									<TD class=style3 vAlign=top><STRONG><SPAN
-												class=style2>Young's</SPAN></STRONG><BR><INPUT size=10 name=young> </TD>
-									<TD class=style3 vAlign=top style="width: 20%"><STRONG><SPAN
-												class=style2>Fried's</SPAN></STRONG><BR><INPUT size=10 name=fried> </TD>
-									<TD class=style3 vAlign=top><STRONG><SPAN
-												class=style2>Webster's</SPAN></STRONG><BR><INPUT size=10 name=webster>
-									</TD>
-								</TR>
-							</TBODY>
-						</TABLE>
+												</TD>
+												<TD class=style3 vAlign=top width="auto"><STRONG><SPAN class=style5>Date
+															of
+															Birth</SPAN></STRONG><BR><INPUT class=Menu value=mm/dd/yyyy
+														size=12 name=dob></TD>
+												<TD class=style3 vAlign=top style="width: auto"><STRONG><SPAN
+															class=style5>Date
+															of
+															Test</SPAN></STRONG><BR><INPUT class=Menu value=mm/dd/yyyy
+														size=12 name=dot> </TD>
+												<TD class=style3 vAlign=top width="auto"></TD>
+											</TR>
+											<TR>
+												<TD class=style3></TD>
+												<TD class=style3><BR><INPUT onclick=peddose(this.form) value=Calculate
+														type=button name=calc><BR><BR></TD>
+												<TD class=style3></TD>
+												<TD class=style3><BR><INPUT value=Reset type=reset name=clear><BR></TD>
+												<TD class=style3></TD>
+											</TR>
+											<TR>
+												<TD class=style3 vAlign=top><STRONG><SPAN
+															class=style2>BSA</SPAN></STRONG><BR><INPUT size=10 name=bsa>
+												</TD>
+												<TD class=style3 vAlign=top><STRONG><SPAN
+															class=style2>Clark's</SPAN></STRONG><BR><INPUT size=10
+														name=clark>
+												</TD>
+												<TD class=style3 vAlign=top><STRONG><SPAN
+															class=style2>Young's</SPAN></STRONG><BR><INPUT size=10
+														name=young>
+												</TD>
+												<TD class=style3 vAlign=top><STRONG><SPAN
+															class=style2>Fried's</SPAN></STRONG><BR><INPUT size=10
+														name=fried>
+												</TD>
+												<TD class=style3 vAlign=top><STRONG><SPAN
+															class=style2>Webster's</SPAN></STRONG><BR><INPUT size=10
+														name=webster>
+												</TD>
+											</TR>
+										</TBODY>
+									<!-- </TABLE> -->
+								</table>
+							<!-- </div>
+						</div> -->
 					</FORM>
 					<p style="font-size:14px;">DISCLAIMER: All calculations
 						must be confirmed before use. The authors make no claims of the accuracy of
@@ -236,7 +253,7 @@ Release Date: August 2010
 			</div>
 
 			<div class="w3-half">
-				<div class="w3-card-resources w3-container w3-mobile">
+				<div class="w3-card-resources w3-container">
 					<h3>Quick Links</h3><br>
 					<ul>
 						<dt>CALCULATORS
@@ -311,7 +328,7 @@ Release Date: August 2010
 
 	<!-- Footer -->
 	<footer class="w3-mobile">
-		<footer><i>NuTech, Inc.</i> &copy; | All Rights Reserved | Design by Huntington Digital Marketing Solutions
+		<footer><i>Allen's NuTech, Inc.</i> &copy; | All Rights Reserved
 		</footer>
 		<!-- </div> -->
 	</footer>
