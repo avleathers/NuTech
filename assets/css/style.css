@@ -2,13 +2,17 @@
   Nav Bar and Logo on All Pages
   ---------------------------- */
   .img-fluid {
-    width: 500px;
+    max-width: 300px;
     height: auto;
   }
   
   .w3-top {
     /* background-color: rgb(233, 237, 249); */
     background-color: white;
+  }
+
+  #myNavbar {
+    max-height: 300px;
   }
   
   a:link {
@@ -75,12 +79,13 @@
   }
   
   .w3-margin-top {
-    margin-top: 0;
+    margin-top: 20px;
   }
   
   .w3-center {
     padding-top: 8px;
     margin-top: 18px;
+    margin-bottom: 0px;
   }
   
   .center {
@@ -94,7 +99,7 @@
   
   #logo {
     width: auto;
-    height: auto;
+    height: 225px;
   }
   
   .w3-center-testamonials {font-family: "Roboto", sans-serif;}
@@ -112,10 +117,16 @@
     -webkit-flex-wrap: wrap;
     display: flex;
     flex-wrap: wrap;
+    flex-flow: row wrap;
     align-items: stretch;
-  
   }
-  
+
+  @media(min-width:768px) {
+    .w3-row-padding {
+      flex-flow: row nowrap;
+    }
+  }
+
   p {
     font-size: 18px;
     text-align: left;
@@ -127,17 +138,68 @@
   /* Create a Parallax Effect */
   /* First image (Full height) */
   .bgimg-1 {
-    /* background-image: url("../images/bgimage1.jpg"); */
-    background-image: url("../images/brainscan.jpg");
-    /* height: 100%; */
-    /* width: auto; */
-    height: 500px;
-    background-attachment: fixed;
+    background-image: url("../images/bgimg-5.jpg");
+    width: auto;
+    height: 100%;
+    /* background-attachment: fixed; */
     background-position: center;
     background-repeat: no-repeat;
-    /* background-size: cover; */
-    background-size: 100% auto;
+    background-size: cover ;
+    /* background-size: 100% auto; */
     /* opacity: 0.5; */
+  }
+
+  .w3-display-left {
+    padding-left: 10%;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .w3-display-topright {
+    margin-top: 4em;
+    padding-right: 10%;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .w3-display-right {
+    padding-right: 10%;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .w3-display-bottomright {
+    margin-bottom: 4em;
+    padding-right: 10%;
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .centered1 {
+    position: absolute;
+    top: 30%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .centered2 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
+  }
+
+  .centered3 {
+    position: absolute;
+    top: 70%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-family: "Roboto", sans-serif;
+    font-size: 20px;
   }
   
   @media screen and (max-width: 768px) {
@@ -154,8 +216,8 @@
   }
   
   #myHeader {
-    /* margin-top: 5%;
-    padding-top: 5%; */
+    /* margin-top: 5%; */
+    padding-top: 3%;
     width: 100%;
   }
   
@@ -174,11 +236,23 @@
     font-weight: 900;
   }
   
+  .h4-home {
+    padding-top: 25px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    color: whitesmoke;
+    font-size: 20px;
+    /* margin-top: -10px; */
+  }
+
   h4 {
     padding-top: 25px;
     text-align: center;
     margin-left: 75px;
     margin-right: 75px;
+    margin-top: 50px;
   }
   
   h5 {
@@ -205,7 +279,8 @@
   }
   
   .w3-card-home {
-    box-shadow: 2px 2px 2px 2px #003da5;
+    /* box-shadow: 2px 2px 2px 2px #003da5; */
+    box-shadow: 2px 2px 2px 2px black;
     margin-bottom: 50px;
     background-color: whitesmoke;
     min-height: 100%;
@@ -213,11 +288,12 @@
   }
   
   .w3-card-home-awards {
-    box-shadow: 2px 2px 2px 2px #003da5;
+    box-shadow: 2px 2px 2px 2px black;
     margin-bottom: 50px;
     background-color: whitesmoke;
     min-height: 100%;
     align-items: stretch;
+  
   }
   
   .w3-card-company {
