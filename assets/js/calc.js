@@ -1,4 +1,5 @@
 function calcdecay(form) {
+
     var act = form.initact.value;
     var act2;
     var t = form.decayt.value;
@@ -57,8 +58,8 @@ function calcdecay(form) {
     if (act2 <= 0.000001)
         act2 = 0
     form.finact.value = act2;
-
 }
+
 function calcTdecay(form) {
     var temp;
     temp = (top.frames[0].document.isoform2.halflife.value / -0.693147) * Math.log(top.frames[1].document.isoform.finact2.value / top.frames[1].document.isoform.initact2.value)
