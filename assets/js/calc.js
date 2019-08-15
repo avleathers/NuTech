@@ -1,85 +1,89 @@
 function calcdecay(form) {
-    var act = form.initact.value;
+
+    var act = parseInt(form.initact.value);
     var act2;
-    var t = form.decayt.value;
+    var t = parseInt(form.decayt.value);
     if (form.decayu[0].checked) {
-        if (top.frames[0].document.isoform2.timeunit.value == "m")
+        if (document.isoform2.timeunit.value == "m")
             t = t * (1 / 60)
-        else if (top.frames[0].document.isoform2.timeunit.value == "h")
+        else if (document.isoform2.timeunit.value == "h")
             t = t * (1 / 3600)
-        else if (top.frames[0].document.isoform2.timeunit.value == "d")
+        else if (document.isoform2.timeunit.value == "d")
             t = t * (1 / 86400)
-        else if (top.frames[0].document.isoform2.timeunit.value == "y")
+        else if (document.isoform2.timeunit.value == "y")
             t = t * (1 / 31557600)
     }
     else if (form.decayu[1].checked) {
-        if (top.frames[0].document.isoform2.timeunit.value == "s")
+        if (document.isoform2.timeunit.value == "s")
             t = t * 60
-        else if (top.frames[0].document.isoform2.timeunit.value == "h")
+        else if (document.isoform2.timeunit.value == "h")
             t = t * (1 / 60)
-        else if (top.frames[0].document.isoform2.timeunit.value == "d")
+        else if (document.isoform2.timeunit.value == "d")
             t = t * (1 / 1440)
-        else if (top.frames[0].document.isoform2.timeunit.value == "y")
+        else if (document.isoform2.timeunit.value == "y")
             t = t * (1 / 525960)
     }
     else if (form.decayu[2].checked) {
-        if (top.frames[0].document.isoform2.timeunit.value == "s")
+        if (document.isoform2.timeunit.value == "s")
             t = (t * 3600)
-        else if (top.frames[0].document.isoform2.timeunit.value == "m")
+        else if (document.isoform2.timeunit.value == "m")
             t = (t * 60)
-        else if (top.frames[0].document.isoform2.timeunit.value == "d")
+        else if (document.isoform2.timeunit.value == "d")
             t = (t / 24)
-        else if (top.frames[0].document.isoform2.timeunit.value == "y")
+        else if (document.isoform2.timeunit.value == "y")
             t = (t / 8766)
     }
     else if (form.decayu[3].checked) {
-        if (top.frames[0].document.isoform2.timeunit.value == "s")
+        if (document.isoform2.timeunit.value == "s")
             t = (t * 86400)
-        else if (top.frames[0].document.isoform2.timeunit.value == "m")
+        else if (document.isoform2.timeunit.value == "m")
             t = (t * 1440)
-        else if (top.frames[0].document.isoform2.timeunit.value == "h")
+        else if (document.isoform2.timeunit.value == "h")
             t = (t * 24)
-        else if (top.frames[0].document.isoform2.timeunit.value == "y")
+        else if (document.isoform2.timeunit.value == "y")
             t = (t / 365.25)
     }
     else if (form.decayu[4].checked) {
-        if (top.frames[0].document.isoform2.timeunit.value == "s")
+        if (document.isoform2.timeunit.value == "s")
             t = (t * 31557600)
-        else if (top.frames[0].document.isoform2.timeunit.value == "m")
+        else if (document.isoform2.timeunit.value == "m")
             t = (t * 525960)
-        else if (top.frames[0].document.isoform2.timeunit.value == "h")
+        else if (document.isoform2.timeunit.value == "h")
             t = (t * 8766)
-        else if (top.frames[0].document.isoform2.timeunit.value == "d")
+        else if (document.isoform2.timeunit.value == "d")
             t = (t * 365.25)
     }
 
-    act2 = act * (Math.exp(-0.693147 * t / top.frames[0].document.isoform2.halflife.value));
+    act2 = act * (Math.exp(-0.693147 * t / document.isoform2.halflife.value));
     if (act2 <= 0.000001)
         act2 = 0
     form.finact.value = act2;
 
 }
 function calcTdecay(form) {
+    var isoform2 = parseFloat(document.isoform2.halflife.value);
     var temp;
-    temp = (top.frames[0].document.isoform2.halflife.value / -0.693147) * Math.log(top.frames[1].document.isoform.finact2.value / top.frames[1].document.isoform.initact2.value)
+    temp = (isoform2 / -0.693147) * Math.log(document.isoform.finact2.value / document.isoform.initact2.value)
     if (temp <= 0.00001)
         temp = 0;
     form.decayt2.value = temp;
-    form.Tunit.value = top.frames[0].document.isoform2.timeunit.value
+    form.Tunit.value = document.isoform2.timeunit.value
 }
 
 function calcTdisposal(form) {
+    debugger;
+
     var temp;
 
-    if (top.frames[1].document.isoform.solid.value == 0) {
+    if (document.isoform.disposalLimit.value == 0) {
         alert("You need to enter a solid disposal limit for the selected isotope. Refer to your licence or contact your radiation safety office.")
     }
     else {
-        temp = (top.frames[0].document.isoform2.halflife.value / -0.693147) * Math.log(top.frames[1].document.isoform.solid.value / (top.frames[1].document.isoform.initact3.value / top.frames[1].document.isoform.mass.value))
+        temp = (document.isoform2.halflife.value / -0.693147) * Math.log(document.isoform.disposalLimit.value / (document.isoform.initact3.value / document.isoform.mass.value))
         if (temp <= 0.00001)
             temp = 0;
         form.decayt3.value = temp;
-        form.Tunit3.value = top.frames[0].document.isoform2.timeunit.value
+        form.Tunit3.value = document.isoform2.timeunit.value
     }
 }
 
@@ -154,7 +158,7 @@ function deldate(form) {
     date1 = Date.parse(form.date1.value);
     date2 = Date.parse(form.date2.value);
     diff = Math.abs(date2 - date1);
-    form.days1.value = diff / 86400000;
+    form.days1.value = parseInt(diff / 86400000);
 }
 
 function adddays(form) {

@@ -34,8 +34,8 @@ Release Date: August 2010
 
 </head>
 
-<BODY onLoad="checkBrowser()">
-    <!-- Navbar (sit on top) -->
+<BODY onload="checkBrowser()">
+    <!-- Navbar (sit on topechoose) -->
     <div class="w3-top">
         <div class="w3-bar w3-card w3-animate-top w3-light-grey">
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
@@ -214,7 +214,7 @@ Release Date: August 2010
                                             <OPTION VALUE="Zinc 62">Zinc 62&nbsp;
                                             <OPTION VALUE="Zinc 65">Zinc 65&nbsp;
                                         </SELECT>
-                                        <INPUT NAME="select" TYPE="button" onClick="topechoose(this.form)"
+                                        <INPUT NAME="select" TYPE="button" onclick="topechoose(this.form)"
                                             VALUE="Select">
                                     </p>
                                 </TD>
@@ -251,9 +251,9 @@ Release Date: August 2010
                                 </tr>
                                 <tr>
                                     <td>Time units
-                                        <input type="radio" name="decayu" value="d">
+                                        <input type="radio" name="decayu" value="s">
                                         s
-                                        <input type="radio" name="decayu" value="y">
+                                        <input type="radio" name="decayu" value="m">
                                         m
                                         <input type="radio" name="decayu" value="h">
                                         h
@@ -263,7 +263,7 @@ Release Date: August 2010
                                         y</td>
                                 </tr>
                                 <tr>
-                                    <td><input name="calc1" type="button" onClick="calcdecay(this.form)"
+                                    <td><input name="calc1" type="button" onclick="calcdecay(this.form)"
                                             value="Calculate"></td>
                                 </tr>
                                 <tr>
@@ -290,7 +290,7 @@ Release Date: August 2010
                                         <td><input name="finact2" type="text" size="10"></td>
                                     </tr>
                                     <tr>
-                                        <td><input name="calc2" type="button" onClick="calcTdecay(this.form)"
+                                        <td><input name="calc2" type="button" onclick="calcTdecay(this.form)"
                                                 value="Calculate"></td>
                                     </tr>
                                     <tr>
@@ -317,12 +317,17 @@ Release Date: August 2010
                                             kBq</td>
                                     </tr>
                                     <tr>
+                                        <td>Disposal Limit (D.L.) </td>
+                                        <td><input type="text" name="disposalLimit" size="10">
+                                            kBq</td>
+                                    </tr>
+                                    <tr>
                                         <td>mass (m)</td>
                                         <td><input type="text" name="mass" size="10">
                                             kg</td>
                                     </tr>
                                     <tr>
-                                        <td><input name="calc3" type="button" onClick="calcTdisposal(this.form)"
+                                        <td><input name="calc3" type="button" onclick="calcTdisposal(this.form)"
                                                 value="Calculate">
                                         </td>
                                     </tr>
@@ -356,12 +361,12 @@ Release Date: August 2010
                                             <td>Activity 2 <INPUT NAME="activity2" TYPE="text" SIZE=6>
                                             </td>
                                             <td><INPUT TYPE="radio" NAME="unit2" VALUE="kBq"
-                                                    onClick=convertUnit(this.form)>kBq<INPUT TYPE="radio" NAME="unit2"
-                                                    VALUE="MBq" onClick=convertUnit(this.form)>MBq<INPUT TYPE="radio"
-                                                    NAME="unit2" VALUE="GBq" onClick=convertUnit(this.form)>GBq<INPUT
+                                                    onclick=convertUnit(this.form)>kBq<INPUT TYPE="radio" NAME="unit2"
+                                                    VALUE="MBq" onclick=convertUnit(this.form)>MBq<INPUT TYPE="radio"
+                                                    NAME="unit2" VALUE="GBq" onclick=convertUnit(this.form)>GBq<INPUT
                                                     TYPE="radio" NAME="unit2" VALUE="uCi"
-                                                    onClick=convertUnit(this.form)>&micro;Ci<INPUT TYPE="radio"
-                                                    NAME="unit2" VALUE="mCi" onClick=convertUnit(this.form)>mCi</td>
+                                                    onclick=convertUnit(this.form)>&micro;Ci<INPUT TYPE="radio"
+                                                    NAME="unit2" VALUE="mCi" onclick=convertUnit(this.form)>mCi</td>
                                         </tr>
                                         <tr>
                                             <td><INPUT NAME="clear" TYPE="reset" VALUE="Reset"></td>
@@ -389,7 +394,7 @@ Release Date: August 2010
                                             <td>Date 2</td>
                                         </tr>
                                         <tr>
-                                            <td><input name="calc4" type="button" onClick="deldate(this.form)"
+                                            <td><input name="calc4" type="button" onclick="deldate(this.form)"
                                                     value="Calculate">
                                             </td>
                                         </tr>
@@ -420,7 +425,7 @@ Release Date: August 2010
                                             </tr>
                                             <tr>
                                                 <td><input name="calc5" type="button" class="Menu"
-                                                        onClick="adddays(this.form)" value="Calculate"></td>
+                                                        onclick="adddays(this.form)" value="Calculate"></td>
                                             </tr>
                                             <tr>
                                                 <td><INPUT NAME="date4" TYPE="text" class="Menu" SIZE=12>
