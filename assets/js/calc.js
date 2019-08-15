@@ -1,4 +1,5 @@
 function calcdecay(form) {
+
     var act = parseInt(form.initact.value);
     var act2;
     var t = parseInt(form.decayt.value);
@@ -57,8 +58,8 @@ function calcdecay(form) {
     if (act2 <= 0.000001)
         act2 = 0
     form.finact.value = act2;
-}
 
+}
 function calcTdecay(form) {
     var isoform2 = parseFloat(document.isoform2.halflife.value);
     var temp;
