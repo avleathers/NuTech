@@ -19,6 +19,11 @@
     color:  #003da5;
     text-decoration: none;
   }
+
+  .a-products:link {
+    color:  #91e3f5;
+    text-decoration: none;
+  }
   
   a:visited {
     color:  #003da5;
@@ -56,6 +61,7 @@
     scroll-behavior: smooth;
     text-align: center;
   }
+
   
   h6 {
     color:rgb(38, 36, 36);
@@ -80,6 +86,10 @@
   
   .w3-margin-top {
     margin-top: 20px;
+  }
+
+  .w3-margin-top-calc {
+    margin-top: 64px!important; 
   }
   
   .w3-center {
@@ -109,7 +119,7 @@
   }
   
   .w3-row-padding {
-    padding-top: 20px;
+    padding-top: 45px;
     padding-left: 5%;
     padding-right: 5%;
     margin-bottom: 20px;
@@ -148,6 +158,40 @@
     /* background-size: 100% auto; */
     /* opacity: 0.5; */
   }
+
+
+  .h3-phone1 {
+    color:whitesmoke;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    text-align: center;
+    padding-top: 15px;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    font-size: 18px;
+  }
+
+  .h3-phone {
+    color:whitesmoke;
+    line-height: 1.5;
+    scroll-behavior: smooth;
+    text-align: center;
+    padding-top: 10px;
+    margin-left: 100px;
+    margin-right: 100px;
+    font-size: 18px;
+  }
+
+  .h4-homepage {
+    padding-top: 24px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    color: whitesmoke;
+    font-size: 20px;
+  }
+
 
   .w3-display-left {
     padding-left: 10%;
@@ -220,6 +264,17 @@
     padding-top: 3%;
     width: 100%;
   }
+
+  .h4-home {
+    padding-top: 40px;
+    text-align: center;
+    margin-left: 100px;
+    margin-right: 100px;
+    margin-top: 50px;
+    color: whitesmoke;
+    font-size: 20px;
+    /* margin-top: -10px; */
+  }
   
   li {
     font-size: 16px;
@@ -236,17 +291,7 @@
     font-weight: 900;
   }
   
-  .h4-home {
-    padding-top: 25px;
-    text-align: center;
-    margin-left: 100px;
-    margin-right: 100px;
-    margin-top: 50px;
-    color: whitesmoke;
-    font-size: 20px;
-    /* margin-top: -10px; */
-  }
-
+  
   h4 {
     padding-top: 25px;
     text-align: center;
@@ -295,6 +340,11 @@
     align-items: stretch;
   
   }
+
+  .w3-panel {
+    margin-top: 0;
+    margin-bottom: 0;
+  }
   
   .w3-card-company {
     box-shadow: 2px 2px 2px 2px #003da5;
@@ -311,7 +361,7 @@
     text-align: left;
   }
   
-  .w3-card-contact {
+  /* .w3-card-contact {
     box-shadow: 2px 2px 2px 2px #003da5;
     padding: 15px;
     margin-bottom: 5px;
@@ -323,7 +373,7 @@
   .w3-card-contact li {
     text-align: left;
     list-style-type: none;
-  }
+  } */
   
   .w3-card-team {
     box-shadow: 2px 2px 2px 2px #003da5;
