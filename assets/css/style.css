@@ -361,20 +361,6 @@
     text-align: left;
   }
   
-  /* .w3-card-contact {
-    box-shadow: 2px 2px 2px 2px #003da5;
-    padding: 15px;
-    margin-bottom: 5px;
-    background-color: whitesmoke;
-    min-height: 100%;
-    align-items: stretch;
-  }
-  
-  .w3-card-contact li {
-    text-align: left;
-    list-style-type: none;
-  } */
-  
   .w3-card-team {
     box-shadow: 2px 2px 2px 2px #003da5;
     margin-bottom: 50px;
@@ -550,4 +536,9 @@ only screen and (max-width: 1500px) {
 b {
   font-size: 18px;
   font-weight: bold;
+}
+
+video {
+  width: 100%;
+  height: auto;
 }
