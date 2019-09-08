@@ -10,6 +10,7 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 <script src="https://kit.fontawesome.com/96a8611a1e.js"></script>
 
@@ -26,7 +27,7 @@
 
     <!-- Navbar (sit on top) -->
     <div class="w3-top">
-        <div class="w3-bar w3-card w3-animate-top w3-light-grey">
+        <div class="w3-bar w3-card w3-animate-top w3-light-grey" id="myNavbar">
             <a class="w3-bar-item w3-button w3-hover-black w3-hide-large w3-right" href="javascript:void(0);"
                 onclick="toggleFunction()" title="Toggle Navigation Menu">
                 <i class="fa fa-bars"></i>
@@ -34,7 +35,8 @@
 
             <!-- Logo -->
             <a class="logo-image">
-                <img src="assets/images/Nutech royal.png" class="img-fluid"></a>
+                <img src="assets/svg/LOGObludrk.svg" class="img-fluid"></a>
+            <!-- <img src="assets/images/Nutech royal.png" class="img-fluid"></a> -->
             <a href="./resources.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Resources</a>
             <a href="./services.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
@@ -44,7 +46,7 @@
             <a href="./team.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Our Team</a>
             <a href="./media.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
-                In the News</a>
+                Media</a>
             <a href="./company.html" class="w3-bar-item w3-button w3-hide-small w3-hide-medium w3-right">
                 Our Company</a>
             <a href="./testimonials.html"
@@ -69,16 +71,13 @@
     <!-- Background Image -->
     <div class="background">
         <div class="bgimg-1 w3-display-container w3-padding-64">
-            <div class="h4-home w3-hide-small"><i>NuTech, Inc. </i> In the News</div>
+            <div class="h4-home w3-hide-small"><i>NuTech, Inc. </i> Media</div>
             <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
                 <div class="w3-half">
                     <div class="w3-card-services w3-container">
                         <h3>Danny Allen in Saturn Ad</h3>
                         <br>
                         <img src="assets/images/dannysaturn.jpg" alt="Danny Saturn" width="75%" height="auto">
-                        <!-- <br>
-                        <br>
-                        <p><i>NuTech, Inc. </i> Need Content.</p> -->
                     </div>
                 </div>
 
@@ -91,28 +90,19 @@
                     </div>
                 </div>
             </div>
-            <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
-                <div class="w3-half">
-                    <div class="w3-card-services w3-container">
-                        <h3>Company Tour</h3>
-                        <br>
-
-                        <video controls>
-                            <source src="assets/images/NutechCompanyTour.mp4" type="video/mp4"></video>
-                    </div>
-                </div>
-
-                <div class="w3-half">
-                    <div class="w3-card-services w3-container">
-
-                        <h3>NuTech Finished</h3>
-                        <br>
-                        <video width="450" height="338" controls>
-                            <source src="assets/images/Nutech Finished Video.mp4" type="video/mp4"></video>
+            <div class="w3-margin-top w3-margin-bottom">
+                <div class="w3-card-media w3-center w3-container">
+                    <h3>NuTech Company Tour</h3>
+                    <br>
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/_KYyDuyhxS8"
+                            frameborder="0"
+                            allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+                            allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
-            <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
+            <!-- <div class="w3-row-padding w3-center w3-margin-top w3-margin-bottom">
                 <div class="w3-half">
                     <div class="w3-card-services w3-container">
 
@@ -132,7 +122,7 @@
 
                     </div>
                 </div>
-            </div>
+            </div> -->
         </div>
 
         <!-- Footer -->
