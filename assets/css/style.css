@@ -13,6 +13,7 @@
 
   #myNavbar {
     max-height: 300px;
+    background-color: black;
   }
   
   a:link {
@@ -426,6 +427,18 @@
     min-height: 100%;
     align-items: stretch;
   }
+
+  .w3-card-media {
+    box-shadow: 2px 2px 2px 2px #003da5;
+    /* margin-bottom: 50px; */
+    margin-left: 10%;
+    margin-right: 10%;
+    background-color: whitesmoke;
+    /* min-height: 100%; */
+    align-items: stretch;
+    min-height: 100%
+  }
+
   
   /* ---------------------
     Footer - All Pages
